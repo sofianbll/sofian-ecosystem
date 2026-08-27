@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Sofian Ecosystem — Carte Niveau 0</title>
+  <!-- Projection visuelle dérivée. Source canonique : Sofian Ecosystem - Architecture Niveau 0.md -->
+  <style>
+    :root {
+      --fallback-ink: #17201c;
+      --fallback-muted: #66706a;
+      --fallback-card: #fbfcfb;
+      --fallback-border: #d9dfdb;
+      --fallback-accent: #eef2ef;
+
+      --ink: var(--foreground, var(--fallback-ink));
+      --muted: var(--muted-foreground, var(--fallback-muted));
+      --surface: var(--card, var(--fallback-card));
+      --line: var(--border, var(--fallback-border));
+      --ui-accent: var(--accent, var(--fallback-accent));
+
+      --family-self: #c75e4b;
+      --family-growth: #3f6da5;
+      --family-security: #39815d;
+      --sofian: #b7791f;
+
+      --radius: 12px;
+      --radius-small: 8px;
+      --ease: 160ms ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fallback-ink: #edf2ee;
+        --fallback-muted: #a9b3ad;
+        --fallback-card: #151a17;
+        --fallback-border: #343c37;
+        --fallback-accent: #252d28;
+        --family-self: #e58b7b;
+        --family-growth: #7ea6d6;
+        --family-security: #72b892;
+        --sofian: #e5b45d;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: transparent;
+      color: var(--ink);
+    }
+
+    body {
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.45;
+      text-rendering: optimizeLegibility;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+    }
+
+    .artifact {
+      width: 100%;
+      padding: 4px 0 18px;
+    }
+
+    .eyebrow,
+    .micro-label,
+    .lane-number,
+    .source-label {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .artifact-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+      gap: clamp(24px, 5vw, 72px);
+      align-items: end;
+      padding: 8px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--sofian);
+    }
+
+    h1,
+    h2,
+    h3,
+    p { margin-top: 0; }
+
+    h1 {
+      max-width: 780px;
+      margin-bottom: 10px;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: clamp(2.05rem, 5vw, 4.4rem);
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: -0.048em;
+      text-wrap: balance;
+    }
+
+    .lede {
+      max-width: 720px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.16rem);
+      text-wrap: pretty;
+    }
+
+    .read-guide {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 12px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .read-guide dt {
+      color: var(--sofian);
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .read-guide dd {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .projection-note {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .projection-note strong { color: var(--ink); }
+
+    .source-label {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      color: var(--muted);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.65fr);
+      gap: 16px;
+      align-items: stretch;
+      padding-top: 16px;
+    }
+
+    .map-panel,
+    .inspector,
+    .scenario-lab,
+    .decision-bar {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+    }
+
+    .map-panel {
+      min-width: 0;
+      padding: clamp(14px, 2.4vw, 24px);
+    }
+
+    .panel-heading {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .panel-heading h2,
+    .scenario-heading h2,
+    .decision-copy h2 {
+      margin-bottom: 4px;
+      font-size: 1.08rem;
+      letter-spacing: -0.025em;
+    }
+
+    .panel-heading p,
+    .scenario-heading p,
+    .decision-copy p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .family-legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 12px;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .legend-mark {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--legend-color);
+    }
+
+    .map-layout {
+      display: grid;
+      grid-template-columns: 142px minmax(0, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .core {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 410px;
+    }
+
+    .core::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -21px;
+      width: 22px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .core-node {
+      display: grid;
+      place-items: center;
+      width: 126px;
+      aspect-ratio: 1;
+      padding: 14px;
+      border: 2px solid var(--sofian);
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--sofian) 8%, var(--surface));
+      text-align: center;
+    }
+
+    .core-node strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: "Iowan Old Style", Georgia, serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.035em;
+    }
+
+    .core-node span {
+      color: var(--muted);
+      font-size: 0.72rem;
+      line-height: 1.25;
+    }
+
+    .lanes {
+      position: relative;
+      display: grid;
+      gap: 10px;
+      padding-left: 20px;
+      border-left: 1px solid var(--line);
+    }
+
+    .lane {
+      --family-color: var(--family-self);
+      display: grid;
+      grid-template-columns: minmax(150px, 0.62fr) minmax(0, 1.9fr);
+      gap: 14px;
+      align-items: center;
+      min-width: 0;
+      padding: 10px 0;
+    }
+
+    .lane::before {
+      content: "";
+      width: 20px;
+      height: 1px;
+      margin-left: -20px;
+      background: var(--family-color);
+      transform: translateY(32px);
+    }
+
+    .lane--self { --family-color: var(--family-self); }
+    .lane--growth { --family-color: var(--family-growth); }
+    .lane--security { --family-color: var(--family-security); }
+
+    .lane-copy {
+      grid-column: 1;
+      margin-top: -1px;
+    }
+
+    .lane-number { color: var(--family-color); }
+
+    .lane-copy h3 {
+      margin: 4px 0 4px;
+      font-size: 0.93rem;
+      letter-spacing: -0.018em;
+    }
+
+    .lane-copy p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+      line-height: 1.35;
+    }
+
+    .domain-track {
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .domain {
+      position: relative;
+      min-height: 96px;
+      padding: 13px 12px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-small);
+      background: color-mix(in srgb, var(--surface) 96%, var(--family-color) 4%);
+      text-align: left;
+      cursor: pointer;
+      transition: border-color var(--ease), background var(--ease), transform var(--ease);
+    }
+
+    .domain:hover {
+      border-color: color-mix(in srgb, var(--family-color) 70%, var(--line));
+      transform: translateY(-1px);
+    }
+
+    .domain:focus-visible,
+    .scenario:focus-visible,
+    .action:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--family-color, var(--sofian)) 45%, transparent);
+      outline-offset: 2px;
+    }
+
+    .domain[aria-pressed="true"] {
+      border-color: var(--family-color);
+      background: color-mix(in srgb, var(--family-color) 11%, var(--surface));
+      box-shadow: inset 0 0 0 1px var(--family-color);
+    }
+
+    .domain.is-secondary {
+      border-style: dashed;
+      border-color: var(--family-color);
+    }
+
+    .domain-name {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 0.83rem;
+      font-weight: 750;
+      line-height: 1.22;
+      text-wrap: balance;
+    }
+
+    .domain-scope {
+      display: block;
+      color: var(--muted);
+      font-size: 0.68rem;
+      line-height: 1.35;
+    }
+
+    .inspector {
+      --family-color: var(--family-self);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: clamp(16px, 2.2vw, 24px);
+      border-top: 3px solid var(--family-color);
+    }
+
+    .inspector-head {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .micro-label { color: var(--family-color); }
+
+    .inspector h2 {
+      margin: 8px 0 6px;
+      font-family: "Iowan Old Style", Georgia, serif;
+      font-size: clamp(1.45rem, 2.7vw, 2.1rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--family-color);
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 15px;
+      margin: 18px 0;
+    }
+
+    .detail-list div { min-width: 0; }
+
+    .detail-list dt {
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+    .detail-list dd {
+      margin: 0;
+      font-size: 0.86rem;
+      line-height: 1.45;
+      text-wrap: pretty;
+    }
+
+    .inspector-scenarios {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .inspector-scenarios h3 {
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+    .inspector-scenarios ul {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding-left: 17px;
+      font-size: 0.8rem;
+    }
+
+    .inspector-action {
+      width: 100%;
+      min-height: 44px;
+      margin-top: 18px;
+      border: 1px solid var(--family-color);
+      border-radius: var(--radius-small);
+      background: transparent;
+      font-weight: 750;
+      cursor: pointer;
+      transition: background var(--ease), color var(--ease);
+    }
+
+    .inspector-action:hover {
+      background: var(--family-color);
+      color: #fff;
+    }
+
+    .scenario-lab {
+      margin-top: 16px;
+      padding: clamp(16px, 2.4vw, 24px);
+    }
+
+    .scenario-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 0.7fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 14px;
+    }
+
+    .scenario-instruction {
+      color: var(--muted);
+      font-size: 0.79rem;
+      text-align: right;
+    }
+
+    .scenario-list {
+      display: grid;
+      gap: 1px;
+      border-top: 1px solid var(--line);
+    }
+
+    .scenario {
+      --scenario-color: var(--family-growth);
+      display: grid;
+      grid-template-columns: minmax(230px, 1.2fr) minmax(170px, 0.7fr) minmax(220px, 1fr);
+      gap: 16px;
+      align-items: center;
+      width: 100%;
+      min-height: 58px;
+      padding: 10px 6px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      transition: background var(--ease);
+    }
+
+    .scenario:hover,
+    .scenario[aria-current="true"] {
+      background: color-mix(in srgb, var(--scenario-color) 7%, transparent);
+    }
+
+    .scenario-name {
+      font-size: 0.84rem;
+      font-weight: 750;
+    }
+
+    .route-label {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--muted);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .route-value {
+      font-size: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .primary-route .route-value { color: var(--scenario-color); font-weight: 750; }
+
+    .decision-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) auto;
+      gap: 18px;
+      align-items: center;
+      margin-top: 16px;
+      padding: clamp(16px, 2.4vw, 24px);
+    }
+
+    .decision-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .action {
+      min-height: 44px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-small);
+      background: transparent;
+      font-weight: 750;
+      cursor: pointer;
+      transition: background var(--ease), border-color var(--ease);
+    }
+
+    .action:hover { border-color: var(--sofian); }
+
+    .action--primary {
+      border-color: var(--sofian);
+      background: var(--sofian);
+      color: #fff;
+    }
+
+    .action--primary:hover {
+      background: color-mix(in srgb, var(--sofian) 86%, #000);
+    }
+
+    .toast {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 20;
+      max-width: min(360px, calc(100vw - 32px));
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-small);
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+      font-size: 0.8rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity var(--ease), transform var(--ease);
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1120px) {
+      .workspace { grid-template-columns: 1fr; }
+      .inspector { min-height: 0; }
+      .detail-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .inspector-scenarios { margin-top: 0; }
+    }
+
+    @media (max-width: 820px) {
+      .artifact-header,
+      .scenario-heading,
+      .decision-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .read-guide { max-width: 520px; }
+      .scenario-instruction { text-align: left; }
+      .decision-actions { justify-content: flex-start; }
+
+      .map-layout {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .core { min-height: 0; place-items: start; }
+      .core::after { display: none; }
+      .core-node {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 76px;
+        aspect-ratio: auto;
+        border-radius: var(--radius-small);
+        text-align: left;
+      }
+      .core-node strong { margin: 0; }
+      .core-node span { max-width: 210px; text-align: right; }
+
+      .lanes {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      .lane { grid-template-columns: 1fr; gap: 9px; }
+      .lane::before { display: none; }
+      .lane-copy,
+      .domain-track { grid-column: 1; }
+    }
+
+    @media (max-width: 620px) {
+      .artifact { padding-bottom: 10px; }
+      h1 { font-size: 2.3rem; }
+      .panel-heading { display: block; }
+      .family-legend { justify-content: flex-start; margin-top: 10px; }
+      .domain-track { grid-template-columns: 1fr; }
+      .domain { min-height: 74px; }
+      .detail-list { grid-template-columns: 1fr; }
+
+      .scenario {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        padding: 13px 6px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="artifact">
+    <header class="artifact-header">
+      <div>
+        <p class="eyebrow">Sofian Ecosystem · Niveau 0</p>
+        <h1>Ta vie avant les outils.</h1>
+        <p class="lede">Neuf responsabilités durables, regroupées pour être lisibles. Clique un domaine pour comprendre sa frontière ; teste ensuite la carte avec une situation réelle.</p>
+      </div>
+      <dl class="read-guide" aria-label="Mode d'emploi">
+        <dt>01</dt><dd>Pars de Sofian, pas d’un logiciel.</dd>
+        <dt>02</dt><dd>Inspecte une responsabilité durable.</dd>
+        <dt>03</dt><dd>Signale seulement le premier écart.</dd>
+      </dl>
+    </header>
+
+    <div class="projection-note">
+      <span><strong>Base Niveau 0 validée le 20 août 2026</strong> — aucun OS, aucune Area et aucune donnée ne sont créés ici.</span>
+      <span class="source-label">Source : Sofian Ecosystem - Architecture Niveau 0.md</span>
+    </div>
+
+    <div class="workspace">
+      <section class="map-panel" aria-labelledby="map-title">
+        <div class="panel-heading">
+          <div>
+            <h2 id="map-title">Carte des responsabilités</h2>
+            <p>Les familles aident à lire ; elles ne hiérarchisent pas ta vie.</p>
+          </div>
+          <div class="family-legend" aria-label="Légende des familles">
+            <span class="legend-item"><span class="legend-mark" style="--legend-color: var(--family-self)"></span>Soi et liens</span>
+            <span class="legend-item"><span class="legend-mark" style="--legend-color: var(--family-growth)"></span>Contribution</span>
+            <span class="legend-item"><span class="legend-mark" style="--legend-color: var(--family-security)"></span>Sécurité</span>
+          </div>
+        </div>
+
+        <div class="map-layout">
+          <aside class="core" aria-label="Point de départ">
+            <div class="core-node">
+              <strong>Sofian</strong>
+              <span>vie entière<br />valeurs · arbitrages</span>
+            </div>
+          </aside>
+
+          <div class="lanes">
+            <section class="lane lane--self" aria-labelledby="lane-self-title">
+              <div class="lane-copy">
+                <span class="lane-number">01</span>
+                <h3 id="lane-self-title">Soi et liens</h3>
+                <p>Habiter sa vie et prendre soin des liens qui comptent.</p>
+              </div>
+              <div class="domain-track">
+                <button class="domain" data-domain="health" aria-pressed="true">
+                  <span class="domain-name">Santé & équilibre</span>
+                  <span class="domain-scope">soins · énergie · TDAH · routines</span>
+                </button>
+                <button class="domain" data-domain="relationships" aria-pressed="false">
+                  <span class="domain-name">Famille & relations</span>
+                  <span class="domain-scope">proches · soutien · engagements</span>
+                </button>
+                <button class="domain" data-domain="home" aria-pressed="false">
+                  <span class="domain-name">Logement & cadre de vie</span>
+                  <span class="domain-scope">foyer · quotidien · mobilité</span>
+                </button>
+              </div>
+            </section>
+
+            <section class="lane lane--growth" aria-labelledby="lane-growth-title">
+              <div class="lane-copy">
+                <span class="lane-number">02</span>
+                <h3 id="lane-growth-title">Développement & contribution</h3>
+                <p>Apprendre, travailler et créer sans confondre les finalités.</p>
+              </div>
+              <div class="domain-track">
+                <button class="domain" data-domain="study" aria-pressed="false">
+                  <span class="domain-name">Études & apprentissage</span>
+                  <span class="domain-scope">Epitech · compétences · exploration</span>
+                </button>
+                <button class="domain" data-domain="work" aria-pressed="false">
+                  <span class="domain-name">Carrière, travail & entreprise</span>
+                  <span class="domain-scope">emploi · alternance · freelance · clients</span>
+                </button>
+                <button class="domain" data-domain="creation" aria-pressed="false">
+                  <span class="domain-name">Création & expression</span>
+                  <span class="domain-scope">Køya · musique · design · projets créatifs</span>
+                </button>
+              </div>
+            </section>
+
+            <section class="lane lane--security" aria-labelledby="lane-security-title">
+              <div class="lane-copy">
+                <span class="lane-number">03</span>
+                <h3 id="lane-security-title">Sécurité & environnement</h3>
+                <p>Préserver les ressources, les droits et le cadre numérique.</p>
+              </div>
+              <div class="domain-track">
+                <button class="domain" data-domain="finance" aria-pressed="false">
+                  <span class="domain-name">Finances personnelles</span>
+                  <span class="domain-scope">comptes · budget · dettes · patrimoine</span>
+                </button>
+                <button class="domain" data-domain="rights" aria-pressed="false">
+                  <span class="domain-name">Droits, identité & protections</span>
+                  <span class="domain-scope">administrations · fiscalité · assurances</span>
+                </button>
+                <button class="domain" data-domain="digital" aria-pressed="false">
+                  <span class="domain-name">Numérique & fabrication</span>
+                  <span class="domain-scope">données · appareils · homelab · impression 3D</span>
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <aside class="inspector" id="inspector" aria-live="polite" aria-labelledby="inspector-title">
+        <div class="inspector-head">
+          <span class="micro-label" id="inspector-family">Soi et liens</span>
+          <h2 id="inspector-title">Santé & équilibre</h2>
+          <span class="status" id="inspector-status">Confirmé · peu représenté dans V4</span>
+        </div>
+
+        <dl class="detail-list">
+          <div>
+            <dt>Responsabilité durable</dt>
+            <dd id="inspector-responsibility">Préserver le fonctionnement physique, mental et quotidien.</dd>
+          </div>
+          <div>
+            <dt>Preuves directes</dt>
+            <dd id="inspector-evidence">Vision V2, dossier Santé, ressources historiques TDAH et routines.</dd>
+          </div>
+          <div>
+            <dt>Frontière</dt>
+            <dd id="inspector-boundary">Le suivi administratif d’un soin reste une capacité de coordination ; la santé reste la finalité.</dd>
+          </div>
+        </dl>
+
+        <div class="inspector-scenarios">
+          <h3>Situations qui testent ce domaine</h3>
+          <ul id="inspector-scenarios">
+            <li>Prendre et suivre un rendez-vous médical.</li>
+          </ul>
+        </div>
+
+        <button class="inspector-action" id="correct-domain" type="button">Corriger ce domaine</button>
+      </aside>
+    </div>
+
+    <section class="scenario-lab" aria-labelledby="scenario-title">
+      <div class="scenario-heading">
+        <div>
+          <h2 id="scenario-title">Tester la carte par le réel</h2>
+          <p>Une situation a un pilote principal et peut conserver des liens secondaires.</p>
+        </div>
+        <p class="scenario-instruction">Sélectionne une ligne : le domaine principal s’ouvre, les domaines secondaires passent en pointillé.</p>
+      </div>
+
+      <div class="scenario-list">
+        <button class="scenario" data-primary="health" data-secondary="rights" aria-current="false">
+          <span class="scenario-name">Prendre et suivre un rendez-vous médical</span>
+          <span class="primary-route"><span class="route-label">Pilote</span><span class="route-value">Santé & équilibre</span></span>
+          <span><span class="route-label">Liens</span><span class="route-value">Droits & protections</span></span>
+        </button>
+        <button class="scenario" data-primary="relationships" data-secondary="rights,finance" aria-current="false">
+          <span class="scenario-name">Faire avancer un dossier familial sensible</span>
+          <span class="primary-route"><span class="route-label">Pilote</span><span class="route-value">Famille & relations</span></span>
+          <span><span class="route-label">Liens</span><span class="route-value">Droits · finances</span></span>
+        </button>
+        <button class="scenario" data-primary="study" data-secondary="work" aria-current="false">
+          <span class="scenario-name">Trouver une alternance liée à Epitech</span>
+          <span class="primary-route"><span class="route-label">Pilote</span><span class="route-value">Études & apprentissage</span></span>
+          <span><span class="route-label">Liens</span><span class="route-value">Carrière & travail</span></span>
+        </button>
+        <button class="scenario" data-primary="work" data-secondary="rights,finance" aria-current="false">
+          <span class="scenario-name">Déclarer le chiffre d’affaires à l’URSSAF</span>
+          <span class="primary-route"><span class="route-label">Pilote</span><span class="route-value">Travail & entreprise</span></span>
+          <span><span class="route-label">Liens</span><span class="route-value">Droits · finances</span></span>
+        </button>
+        <button class="scenario" data-primary="creation" data-secondary="work,finance" aria-current="false">
+          <span class="scenario-name">Préparer une date ou une sortie Køya</span>
+          <span class="primary-route"><span class="route-label">Pilote</span><span class="route-value">Création & expression</span></span>
+          <span><span class="route-label">Liens</span><span class="route-value">Travail · finances</span></span>
+        </button>
+        <button class="scenario" data-primary="digital" data-secondary="creation" aria-current="false">
+          <span class="scenario-name">Entretenir une imprimante 3D pour produire une pièce</span>
+          <span class="primary-route"><span class="route-label">Pilote</span><span class="route-value">Numérique & fabrication</span></span>
+          <span><span class="route-label">Liens</span><span class="route-value">Création & expression</span></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="decision-bar" aria-labelledby="decision-title">
+      <div class="decision-copy">
+        <h2 id="decision-title">Base de travail validée</h2>
+        <p>La structure est retenue. Les systèmes, les OS et les contrats restent volontairement hors champ jusqu’à la couche suivante.</p>
+      </div>
+      <div class="decision-actions">
+        <button class="action" type="button" data-hermes-send="Je veux rouvrir la carte Niveau 0 : il manque un domaine majeur.">Signaler un domaine manquant</button>
+        <button class="action action--primary" type="button" data-hermes-send="Je veux corriger un domaine de la carte Niveau 0 validée.">Rouvrir une correction</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const familyColors = {
+      self: 'var(--family-self)',
+      growth: 'var(--family-growth)',
+      security: 'var(--family-security)'
+    };
+
+    const domains = {
+      health: {
+        familyKey: 'self',
+        family: 'Soi et liens',
+        name: 'Santé & équilibre',
+        status: 'Confirmé · peu représenté dans V4',
+        responsibility: 'Préserver le fonctionnement physique, mental et quotidien.',
+        evidence: 'Vision V2, dossier Santé, ressources historiques TDAH et routines.',
+        boundary: 'Le suivi administratif d’un soin reste une capacité de coordination ; la santé reste la finalité.',
+        scenarios: ['Prendre et suivre un rendez-vous médical.']
+      },
+      relationships: {
+        familyKey: 'self',
+        family: 'Soi et liens',
+        name: 'Famille & relations',
+        status: 'Confirmé · réparti entre fichiers et tâches',
+        responsibility: 'Entretenir les liens et assumer les engagements envers les proches.',
+        evidence: 'Dossier Famille, documents partagés et dossiers familiaux actifs.',
+        boundary: 'La relation pilote ; une démarche juridique ou financière reste un lien secondaire vers le domaine concerné.',
+        scenarios: ['Faire avancer un dossier familial sensible.']
+      },
+      home: {
+        familyKey: 'self',
+        family: 'Soi et liens',
+        name: 'Logement & cadre de vie',
+        status: 'Confirmé · peu représenté dans V4',
+        responsibility: 'Maintenir un foyer sûr et un quotidien viable.',
+        evidence: 'Dossier Logement, contrats et justificatifs liés au foyer.',
+        boundary: 'Le foyer est la finalité ; documents, paiements et fournisseurs sont des moyens ou des acteurs.',
+        scenarios: ['Aucun scénario de contrôle explicite pour l’instant : point à compléter.']
+      },
+      study: {
+        familyKey: 'growth',
+        family: 'Développement et contribution',
+        name: 'Études & apprentissage',
+        status: 'Confirmé · fortement modélisé',
+        responsibility: 'Apprendre, valider les parcours et développer les compétences.',
+        evidence: 'Area Epitech, projets, rendus et TaskNotes structurés.',
+        boundary: 'L’apprentissage pilote tant que la finalité est pédagogique ; l’emploi devient secondaire ou prend le relais selon le résultat visé.',
+        scenarios: ['Trouver une alternance liée à Epitech.']
+      },
+      work: {
+        familyKey: 'growth',
+        family: 'Développement et contribution',
+        name: 'Carrière, travail & entreprise',
+        status: 'Confirmé · fragmenté',
+        responsibility: 'Produire de la valeur et construire des revenus professionnels.',
+        evidence: 'CV, alternance, projets freelance, Agence Poulpi et obligations URSSAF.',
+        boundary: 'Ce domaine possède la finalité professionnelle ; les paiements et déclarations se relient aux finances et aux protections.',
+        scenarios: ['Trouver une alternance liée à Epitech.', 'Déclarer le chiffre d’affaires à l’URSSAF.', 'Préparer une date Køya lorsqu’elle est rémunérée.']
+      },
+      creation: {
+        familyKey: 'growth',
+        family: 'Développement et contribution',
+        name: 'Création & expression',
+        status: 'Confirmé · peu représenté dans V4',
+        responsibility: 'Créer, expérimenter et publier une expression personnelle.',
+        evidence: 'Køya, musique, design, motion et projets créatifs historiques.',
+        boundary: 'La création pilote l’œuvre ; le travail prend le relais lorsque la finalité principale devient commerciale.',
+        scenarios: ['Préparer une date ou une sortie Køya.', 'Produire une pièce avec une imprimante 3D.']
+      },
+      finance: {
+        familyKey: 'security',
+        family: 'Sécurité et environnement',
+        name: 'Finances personnelles',
+        status: 'Confirmé · système spécialisé existant',
+        responsibility: 'Protéger les ressources, arbitrer les dépenses et suivre les engagements.',
+        evidence: 'Finance OS, comptes, dette et aspiration d’automatisation.',
+        boundary: 'La transaction et le cashflow appartiennent aux finances ; la raison humaine du paiement reste dans son domaine principal.',
+        scenarios: ['Faire avancer un dossier familial avec conséquence financière.', 'Observer le paiement lié à une déclaration URSSAF.']
+      },
+      rights: {
+        familyKey: 'security',
+        family: 'Sécurité et environnement',
+        name: 'Droits, identité & protections',
+        status: 'Confirmé · gestion documentaire dispersée',
+        responsibility: 'Rester reconnu, protégé et conforme face aux institutions.',
+        evidence: 'Dossiers Identité, Impôts, Assurances, Contrats et démarches sociales.',
+        boundary: 'Le droit ou la protection est l’enjeu ; l’administration et les documents sont les capacités utilisées pour l’obtenir.',
+        scenarios: ['Suivre un remboursement de santé.', 'Faire avancer un dossier familial.', 'Déclarer le chiffre d’affaires à l’URSSAF.']
+      },
+      digital: {
+        familyKey: 'security',
+        family: 'Sécurité et environnement',
+        name: 'Environnement numérique & fabrication',
+        status: 'Confirmé · fortement investi',
+        responsibility: 'Maintenir les outils, données et équipements qui soutiennent la vie et la création.',
+        evidence: 'Homelab-OS, dotfiles, appareils, Kobra S1 et Wanhao D12.',
+        boundary: 'L’environnement numérique possède ses équipements et opérations ; il ne devient pas propriétaire des projets de vie qu’il héberge.',
+        scenarios: ['Entretenir une imprimante 3D pour produire une pièce.']
+      }
+    };
+
+    const domainButtons = [...document.querySelectorAll('.domain')];
+    const scenarioButtons = [...document.querySelectorAll('.scenario')];
+    const inspector = document.getElementById('inspector');
+    const familyEl = document.getElementById('inspector-family');
+    const titleEl = document.getElementById('inspector-title');
+    const statusEl = document.getElementById('inspector-status');
+    const responsibilityEl = document.getElementById('inspector-responsibility');
+    const evidenceEl = document.getElementById('inspector-evidence');
+    const boundaryEl = document.getElementById('inspector-boundary');
+    const scenariosEl = document.getElementById('inspector-scenarios');
+    const correctButton = document.getElementById('correct-domain');
+    const toast = document.getElementById('toast');
+
+    let selectedDomain = 'health';
+    let toastTimer;
+
+    function updateInspector(key, secondaryKeys = []) {
+      const domain = domains[key];
+      if (!domain) return;
+      selectedDomain = key;
+
+      domainButtons.forEach((button) => {
+        const isSelected = button.dataset.domain === key;
+        const isSecondary = secondaryKeys.includes(button.dataset.domain);
+        button.setAttribute('aria-pressed', String(isSelected));
+        button.classList.toggle('is-secondary', isSecondary);
+      });
+
+      inspector.style.setProperty('--family-color', familyColors[domain.familyKey]);
+      familyEl.textContent = domain.family;
+      titleEl.textContent = domain.name;
+      statusEl.textContent = domain.status;
+      responsibilityEl.textContent = domain.responsibility;
+      evidenceEl.textContent = domain.evidence;
+      boundaryEl.textContent = domain.boundary;
+      const scenarioItems = domain.scenarios.map((item) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        return listItem;
+      });
+      scenariosEl.replaceChildren(...scenarioItems);
+      correctButton.textContent = `Corriger « ${domain.name} »`;
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('is-visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2600);
+    }
+
+    function sendToHermes(prompt) {
+      if (window.hermes && typeof window.hermes.send === 'function') {
+        window.hermes.send(prompt);
+        return;
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(prompt).then(() => showToast('Message copié — colle-le dans la conversation.'));
+      } else {
+        showToast(prompt);
+      }
+    }
+
+    domainButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        scenarioButtons.forEach((scenario) => scenario.setAttribute('aria-current', 'false'));
+        updateInspector(button.dataset.domain);
+      });
+    });
+
+    scenarioButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        scenarioButtons.forEach((scenario) => scenario.setAttribute('aria-current', String(scenario === button)));
+        const secondaryKeys = (button.dataset.secondary || '').split(',').filter(Boolean);
+        updateInspector(button.dataset.primary, secondaryKeys);
+      });
+    });
+
+    correctButton.addEventListener('click', () => {
+      const name = domains[selectedDomain].name;
+      sendToHermes(`Je veux corriger le domaine « ${name} » de la carte Niveau 0.`);
+    });
+
+    updateInspector('health');
+  </script>
+</body>
+</html>
