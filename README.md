@@ -1,6 +1,6 @@
 ---
 title: Sofian Ecosystem
-status: active
+status: foundation_ready_for_pilot
 date: 2026-08-27
 visibility: private-first
 ---
@@ -11,7 +11,7 @@ visibility: private-first
 
 Ce dépôt est la base commune permettant à plusieurs sessions et groupes d’agents de **reconstruire le passé, auditer l’état actuel, découvrir les besoins puis définir avec Sofian l’écosystème cible**.
 
-Il ne remplace aucune source canonique et ne contient encore aucune architecture cible acceptée.
+La **fondation méthodologique et les handoffs sont prêts pour la tranche pilote `AUD-001`**. Le contenu de l’écosystème, les dossiers système et l’architecture actuelle ne sont pas encore audités.
 
 ## Trois portes d’entrée
 
@@ -23,9 +23,10 @@ Il ne remplace aucune source canonique et ne contient encore aucune architecture
 
 - baseline initiale archivée et vérifiée sous [`archive/baselines/2026-08-25-foundation-e331ee4/`](archive/baselines/2026-08-25-foundation-e331ee4/BASELINE.md) ;
 - méthode, scope, sources, preuves et protocoles installés ;
-- briefs initiaux prêts pour délégation ;
-- audits complets : **aucun encore accepté** ;
-- besoins validés : **aucun encore enregistré** ;
+- six briefs bornés et prêts pour délégation ;
+- audits complets intégrés : **aucun** ;
+- dossiers système acceptés : **aucun** ;
+- besoins validés : **aucun** ;
 - cible acceptée : **aucune** ;
 - publication : **privée d’abord, hébergement différé**.
 

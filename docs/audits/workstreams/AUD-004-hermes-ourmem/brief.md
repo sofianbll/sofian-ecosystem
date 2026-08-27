@@ -4,6 +4,9 @@ title: Hermes et ourmem
 status: brief_ready
 date: 2026-08-27
 owner: Jarvis
+role: coordinator
+period: 2026-08-19..2026-08-27
+expected_count: 6_hermes_sessions_plus_ourmem_status
 output_path: none
 source_ids:
   - SRC-HERMES
@@ -16,59 +19,65 @@ source_ids:
 
 Reconstituer les décisions et travaux Hermes liés à Sofian Ecosystem, puis déterminer ce que la mémoire ourmem apporte réellement comme contexte secondaire sans la traiter comme vérité opérationnelle.
 
-## Sources obligatoires
+## Corpus Hermes fermé — 6 sessions
 
-1. sessions Hermes exactes via `session_search` ;
-2. session du chantier commencée le 2026-08-19 et reprises liées ;
-3. sessions Clarify, mémoire, StudioFlow et autres résultats uniquement lorsqu’ils modifient l’écosystème ;
-4. MCP ourmem en lecture ;
-5. état live Hermes et configuration seulement si la question l’exige, sans exposer de secret ;
-6. documentation officielle Hermes pour toute capacité actuelle.
+| Session | Rôle dans l’audit |
+|---|---|
+| `20260819_191819_626eec` | naissance du chantier Sofian Ecosystem |
+| `20260825_175948_c37c83` | reprise et clarification du chantier |
+| `20260825_194053_5f380f` | Clarify et corrections de canon |
+| `20260826_192853_171fd3` | modèle documentaire StudioFlow / VitePress |
+| `20260827_130813_2c311f` | mémoire, Hermes et architecture d’accès |
+| `20260827_154335_c51ad8` | scope, cible par besoins et création du nouveau socle |
+
+Lire les sessions via `session_search`; pour la session active non encore indexée, utiliser `/Users/sofian/.hermes/state.db` en mode read-only et seulement les messages user/assistant/tool nécessaires.
+
+## Source officielle Hermes
+
+- documentation : `https://hermes-agent.nousresearch.com/docs` ;
+- skill : `hermes-agent` ;
+- les docs officielles gagnent sur les anciennes explications produit.
+
+## Branche ourmem bornée
+
+1. tester au maximum trois recherches : `Sofian Ecosystem`, `Sofian OS`, `Jarvis architecture`, limite dix ;
+2. si l’embedding échoue, enregistrer une seule erreur et marquer la recherche `blocked` ;
+3. ne pas contourner par lecture du volume brut ou dump de mémoires ;
+4. toute mémoire retenue reste `memory_lead` jusqu’à corroboration.
 
 ## Questions
 
-1. Quelles décisions de méta-architecture Sofian a-t-il réellement acceptées, corrigées ou rouvertes ?
+1. Quelles décisions de méta-architecture Sofian a-t-il acceptées, corrigées ou rouvertes ?
 2. Quels artefacts et mutations ont été effectués dans chaque session ?
-3. Quels niveaux de livraison ont été annoncés et lesquels sont prouvés ?
-4. Comment Hermes, Jarvis, Bots, skills, mémoire et orchestration ont-ils été distingués ou confondus ?
-5. Quels souvenirs ourmem sont pertinents, frais et corroborés ?
-6. Quelles limites d’accès, quota ou fraîcheur empêchent un audit complet ?
+3. Quels niveaux de livraison sont réellement prouvés ?
+4. Comment Hermes, Jarvis, Bots, skills, mémoire et orchestration ont-ils été distingués ?
+5. Quels souvenirs ourmem sont pertinents et corroborés ?
+6. Quelles limites empêchent une couverture complète ?
 
 ## Méthode et skills
 
-Charger le socle obligatoire du dépôt, puis `cross-agent-session-handoff`, `personal-system-reconciliation`, `hermes-agent`, `ourmem` et `grounded-citations`. Pour toute capacité Hermes actuelle, les docs officielles sont prioritaires.
+Socle obligatoire + `cross-agent-session-handoff`, `personal-system-reconciliation`, `hermes-agent`, `ourmem` et `grounded-citations`. Pour les claims produit, vérifier les docs officielles.
 
-## Règles ourmem
+## Exclusions
 
-- Une mémoire est `memory_lead` jusqu’à corroboration.
-- Ne pas stocker, mettre à jour, partager ou supprimer de mémoire.
-- Si la recherche embedding échoue, documenter le blocage ; ne pas boucler.
-- Ne pas ingérer les sessions ou documents pendant cet audit.
-
-## Règles Hermes
-
-- Utiliser les liens `@session:` comme provenance.
-- Lire les messages autour du vrai checkpoint.
-- Distinguer conversation, résultat d’outil et état externe actuel.
-- Les anciennes explications Hermes sont vérifiées contre les docs officielles actuelles si elles portent sur une capacité produit.
-
-## Découpage parallèle possible
-
-- Worker A : session architecture du 19–25 août ;
-- Worker B : sessions Clarify et corrections ;
-- Worker C : sessions mémoire / Hermes ;
-- Worker D : ourmem, uniquement mémoire secondaire ;
-- Parent : décisions et contradictions.
+- toute autre session sauf lien direct découvert et approuvé par le coordinateur ;
+- données Jawed, CAF, Kobra, OpenJob ou autres sujets sans conséquence architecturale ;
+- mémoire brute, imports et hooks ;
+- configuration secrète Hermes/ourmem.
 
 ## Sortie
 
-Utiliser `templates/audit-report.md` et retourner le rapport dans la session. Aucune écriture dans le dépôt par défaut.
+Un rapport par branche Hermes/ourmem puis une synthèse coordinateur. Retourner dans la session. Aucune écriture dans le dépôt par défaut.
+
+## Niveau de détail
+
+Claims atomiques avec `session_id:message_id`, décisions utilisateur séparées des recommandations et des outils. Couverture : `6/6 sessions` et statut ourmem explicite.
 
 ## Definition of Done
 
-- [ ] sessions attendues et liens enregistrés ;
+- [ ] six sessions inspectées et citées ;
 - [ ] décisions utilisateur séparées des recommandations ;
 - [ ] mutations et résultats live relus ;
-- [ ] claims ourmem corroborés ou marqués secondaires ;
-- [ ] limites de quota et fraîcheur visibles ;
+- [ ] claims produit vérifiés contre les docs actuelles ;
+- [ ] ourmem corroboré ou marqué secondaire/bloqué ;
 - [ ] aucune mémoire ou configuration modifiée.

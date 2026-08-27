@@ -10,21 +10,21 @@ date: 2026-08-27
 
 Aucun dossier système actif n’est encore accepté dans le nouvel arbre. Les documents précédents restent dans la baseline et seront réintégrés uniquement après audit.
 
-## Sujets candidats à auditer
+## Sujets d’audit semés
 
-| Nom littéral | Nature actuelle supposée | État |
-|---|---|---|
-| `Sofian OS V4` | système humain portable / modèle métier | `to_audit` |
-| `Sofian-OS` | vault Obsidian actif / adapter | `confirmed_tool_identity` |
-| `TaskNotes` | gestionnaire d’état des tâches | `current_canon_candidate` |
-| `Jarvis` / `Jarvis Agent` / `Jarvis OS` | agent, projet et architecture selon l’époque | `identity_unresolved` |
-| `Hermes` | runtime et interface agentique actuelle | `live_to_audit` |
-| `OpenCode` | runtime et historique agentique | `future_role_unresolved` |
-| `ourmem` | mémoire sémantique secondaire | `live_to_audit` |
-| `Homelab-OS` | configuration et reconstruction du homelab | `current_canon_candidate` |
-| `Finance OS` | système spécialisé financier | `boundary_to_audit` |
+| Nom littéral | Nature à tester | État documentaire | Source de découverte |
+|---|---|---|---|
+| `Sofian OS V4` | système humain portable / modèle métier | `seeded_subject` | `SRC-OBS-ACTIVE` — Architecture Référence et Journal V4 |
+| `Sofian-OS` | vault Obsidian actif / adapter | `tool_identity_observed` | `SRC-OBS-ACTIVE` — `AGENTS.md:3-8` |
+| `TaskNotes` | gestionnaire d’état des tâches | `authority_claim_sourced` | `SRC-OBS-ACTIVE` — `AGENTS.md:26-31`, Journal V4 `:104-110` |
+| `Jarvis` / `Jarvis Agent` / `Jarvis OS` | agent, projet et architecture selon l’époque | `identity_unresolved` | `SRC-LIVE` — `/Users/sofian/Developer/10-Personal/jarvis/AGENTS.md`, lignes `3–18`, plus sources historiques |
+| `Hermes` | runtime et interface de la session actuelle | `live_subject_to_audit` | `SRC-HERMES` — session `20260827_154335_c51ad8` |
+| `OpenCode` | runtime et historique agentique | `future_role_unresolved` | `SRC-OPENCODE` |
+| `ourmem` | mémoire sémantique secondaire candidate | `live_subject_to_audit` | `SRC-OURMEM` |
+| `Homelab-OS` | configuration et reconstruction du homelab | `authority_claim_sourced` | `SRC-LIVE` — `/Users/sofian/Homelab-OS/AGENTS.md`, lignes `3–23` |
+| `Finance OS` | système spécialisé financier candidat | `historical_subject_to_audit` | `SRC-BASELINE` ; état live à vérifier |
 
-Cette table est une liste de sujets, pas une validation de frontières.
+Cette table est une file de sujets avec provenance, pas une carte de frontières ni d’autorités acceptées.
 
 ## Contrat d’un dossier
 

@@ -6,16 +6,20 @@ date: 2026-08-27
 
 # Definition of Done
 
-## Fondation du dépôt
+> Les cases décrivent des gates vérifiables. L’état global et la couverture courante restent affichés dans `README.md`, `roadmap.md` et `docs/audits/coverage.md`.
 
-- [ ] baseline complète et vérifiée ;
-- [ ] ancien arbre retiré de l’espace actif ;
-- [ ] scope, autorités et confidentialité explicites ;
-- [ ] briefs utilisables sans relire la conversation ;
-- [ ] liens internes valides ;
-- [ ] aucun secret ou contenu personnel inutile ;
-- [ ] `git diff --check` propre ;
-- [ ] deux commits locaux, aucun remote ni push.
+## Fondation du dépôt — vérifiée
+
+- [x] baseline complète et vérifiée ;
+- [x] ancien arbre retiré de l’espace actif ;
+- [x] scope, autorités et confidentialité explicites ;
+- [x] briefs utilisables sans relire la conversation ;
+- [x] liens internes valides ;
+- [x] aucun secret ou contenu personnel inutile ;
+- [x] `git diff --check` propre ;
+- [x] commits locaux vérifiés, aucun remote ni push.
+
+Cela prouve la fondation méthodologique, pas la couverture de l’écosystème.
 
 ## Audit individuel
 

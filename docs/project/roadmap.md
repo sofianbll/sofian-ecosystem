@@ -11,11 +11,9 @@ Cette page décrit les **résultats successifs** du chantier. Elle ne remplace p
 
 ## Phase 0 — Fondation documentaire
 
-**État documentaire : actif.**
+**État : fondation méthodologique prête pour la tranche pilote.**
 
-Résultat : archive initiale, scope, preuves, protocoles, templates et briefs délégables.
-
-Fin lorsque les contrôles de `definition-of-done.md` passent et que le second commit local est propre.
+La structure, les preuves, les protocoles, templates et briefs sont vérifiés. La couverture de l’écosystème reste `not_started` : aucun audit complet ni dossier système n’est accepté.
 
 ## Phase 1 — Tranche historique pilote
 

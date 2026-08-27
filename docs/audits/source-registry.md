@@ -16,12 +16,27 @@ Ce registre décrit où lire. Il ne copie pas les sources et ne décide pas seul
 | `SRC-OBS-OLD` | `/Users/sofian/Documents/Obsidian/Sofian's Vault/` | ancien vault, historique | Git 2026-05-04 → 2026-07-17 | lecture seule explicite |
 | `SRC-OBS-ACTIVE` | `/Users/sofian/Documents/Obsidian/Sofian-OS/` | vault canonique actuel | Git depuis 2026-05-16 | actif ; commits automatiques fréquents |
 | `SRC-OPENCODE` | `/Users/sofian/.local/share/opencode/opencode.db` | historique OpenCode canonique | 2026-06-10 → 2026-08-26 vérifié | base read-only ; index dérivé stale 1601/1609 sessions |
-| `SRC-HERMES` | historique Hermes via `session_search` | sessions et décisions Hermes | au moins depuis 2026-08-19 pour ce chantier | lire les sessions exactes |
+| `SRC-HERMES` | sessions Hermes via `session_search` et base locale read-only | décisions et actions de sessions | chantier depuis 2026-08-19 ; session actuelle depuis 2026-08-27 | FTS peut ne pas indexer la session active immédiatement |
 | `SRC-OURMEM` | MCP `ourmem` | mémoire sémantique secondaire | données récentes visibles | listing accessible ; recherche bloquée par quota embeddings au 2026-08-27 |
 | `SRC-LIVE` | dépôts, configurations, APIs et runtimes spécialisés | état actuel vérifiable | selon chaque système | audit séparé requis |
 | `SRC-GUIDE` | `/Users/sofian/Documents/00-Inbox/Guide-ultime-ingenierie-logicielle.pdf` | méthode d’ingénierie | édition 2026 | méthode, pas décision personnelle |
 | `SRC-BASELINE` | `archive/baselines/2026-08-25-foundation-e331ee4/` | première consolidation du dépôt | commit `e331ee4…` | 73/73 blobs et 255 869 octets vérifiés |
 | `SRC-STUDIOFLOW` | `/Users/sofian/Developer/10-Personal/studioflow/` | modèle VitePress / CI | déploiement vérifié le 2026-08-26 | public ; ne pas copier sa politique de publication |
+
+## Locators de la session fondatrice active
+
+Session Hermes : `20260827_154335_c51ad8`.
+
+| Message | Type | Décision ou besoin supporté |
+|---:|---|---|
+| `52676` | user | demande initiale d’audit complet et de système documentaire |
+| `52682` | user | extension aux origines Notion, Obsidian, oraux et DOCX ; skills obligatoires |
+| `52961` | user | la cible doit être définie après l’audit depuis les besoins |
+| `52945` | réponse `clarify` | publication privée d’abord |
+| `52972` | user | archiver l’ancien contenu et créer le système multi-sessions/subagents |
+| `53020` | réponse `clarify` | remplacer l’ancien arbre et créer deux commits locaux sans push |
+
+Ces locators sont lisibles dans `/Users/sofian/.hermes/state.db` en mode read-only. Après clôture de la session, utiliser `@session:default/20260827_154335_c51ad8` si l’index Hermes l’expose.
 
 ## Priorité de preuve
 
@@ -33,6 +48,14 @@ Ce registre décrit où lire. Il ne copie pas les sources et ne décide pas seul
 → mémoire sémantique
 → hypothèse
 ```
+
+## Résoudre un `SRC-*`
+
+1. chercher l’ID exact dans ce fichier ;
+2. utiliser le chemin, l’ID ou l’API indiquée ;
+3. charger le skill spécialiste ;
+4. vérifier santé, version et période avant de lire le contenu ;
+5. si la source est inaccessible ou ambiguë, arrêter et déclarer `blocked`.
 
 ## Règles de lecture
 

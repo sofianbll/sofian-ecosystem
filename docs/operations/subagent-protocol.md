@@ -21,9 +21,26 @@ Tout prompt de worker contient :
 9. critères de fin ;
 10. niveau de détail attendu.
 
-## Compétences obligatoires
+## Résoudre le Guide et les skills
 
-Le worker charge le Guide 2026 et les skills imposés par `AGENTS.md`. Il charge ensuite le spécialiste de la source, par exemple `notion`, `docx`, `opencode-history`, `obsidian`, `grounded-citations` ou un skill système.
+- Guide : `/Users/sofian/Documents/00-Inbox/Guide-ultime-ingenierie-logicielle.pdf`.
+- Charger le socle défini dans `AGENTS.md`.
+- Charger les références pertinentes via `software-engineering-lifecycle` plutôt que le PDF entier lorsque le brief cible un chapitre.
+- Charger ensuite le spécialiste de la source : `notion`, `docx`, `opencode-history`, `obsidian`, `grounded-citations` ou un skill système.
+
+## Résoudre un `source_id`
+
+1. lire `docs/audits/source-registry.md` ;
+2. trouver l’ID exact ;
+3. utiliser uniquement la source, période et méthode indiquées ;
+4. vérifier le chemin ou l’accès ;
+5. déclarer `blocked` au lieu de deviner.
+
+## Niveaux de détail
+
+- **Chat :** verdict, trois preuves/risques et prochaine décision.
+- **Rapport :** claims atomiques complets, locators, citations, couverture et limites.
+- **Raw data :** jamais dans le chat ; conserver seulement si un artefact séparé est autorisé.
 
 ## Règles d’exécution
 
@@ -62,13 +79,7 @@ Le rapport humain commence par un verdict bref, puis les preuves. Aucun transcri
 
 ## Écriture éventuelle
 
-Par défaut, le worker retourne sa réponse sans écrire. Une écriture est permise seulement si le parent et Sofian ont nommé un chemin isolé exact, par exemple :
-
-```text
-docs/audits/workstreams/AUD-xxx/report.md
-```
-
-Le worker ne modifie jamais le catalogue, la timeline globale ou un autre workstream. Le parent intègre.
+Par défaut, le worker retourne sa réponse sans écrire. Une écriture est permise seulement si le parent et Sofian ont nommé un chemin isolé exact. Le worker ne modifie jamais le catalogue, la timeline globale ou un autre workstream. Le parent intègre.
 
 ## Arrêts obligatoires
 

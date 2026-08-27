@@ -1,6 +1,6 @@
 ---
 title: Architecture actuelle
-status: not_audited
+status: seeded_not_audited
 date: 2026-08-27
 ---
 
@@ -8,20 +8,26 @@ date: 2026-08-27
 
 ## Verdict
 
-**L’architecture actuelle n’est pas encore suffisamment auditée pour être canonisée ici.**
+**L’architecture actuelle n’est pas auditée.** Les éléments ci-dessous sont seulement des claims de cadrage avec provenance ; ils doivent être confirmés, bornés ou rejetés par `AUD-005`.
 
-## Faits de cadrage déjà confirmés
+## Claims de départ
 
-- `Sofian-OS` est le vault actif ;
-- TaskNotes possède l’état des tâches ;
-- `Sofian's Vault` est une source historique en lecture seule ;
-- Hermes est l’interface agentique actuelle de cette conversation ;
-- OpenCode conserve son propre historique et sa responsabilité future reste ouverte ;
-- ourmem est une mémoire secondaire, pas l’autorité universelle ;
-- Homelab-OS possède la configuration du homelab, pas les faits métier hébergés ;
-- le dépôt `sofian-ecosystem` possède le chantier d’audit, pas les faits externes.
+| Claim | État | Source / locator | Limite |
+|---|---|---|---|
+| `Sofian-OS` est le vault Obsidian actif | `current_canon` pour l’identité du vault | `SRC-OBS-ACTIVE` — `AGENTS.md:3-8` ; `Sofian OS V4 - Journal De Décisions.md:94-100` | ne prouve pas que tout son contenu est canonique |
+| TaskNotes possède l’état des tâches | `current_canon` dans le vault | `SRC-OBS-ACTIVE` — `AGENTS.md:26-31` ; Journal V4 `:104-110` | les projets et autres faits demandent leur propre autorité |
+| Hermes héberge la conversation actuelle du chantier | `live_implementation` | `SRC-HERMES` — session `20260827_154335_c51ad8` | ne prouve pas encore toute la responsabilité cible de Jarvis/Hermes |
+| Homelab-OS est un dépôt de contrôle et reconstruction du homelab | `current_canon` pour sa configuration versionnée | `SRC-LIVE` — `/Users/sofian/Homelab-OS/AGENTS.md`, lignes `3–23` | état des services live à vérifier séparément |
+| ce dépôt possède la méthode et les résultats intégrés du chantier d’audit | `user_decision` | `SRC-HERMES` — messages `52676`, `52961`, `52972` ; `AGENTS.md` actif | ne possède aucun fait métier externe |
 
-Ces points doivent encore être recoupés dans leurs dossiers système et scénarios.
+## Claims à tester, pas à adopter
+
+- rôle actuel et futur d’OpenCode ;
+- frontière entre Jarvis, Jarvis Agent, Jarvis OS et Hermes ;
+- rôle exact de ourmem et des autres mémoires ;
+- frontière et fraîcheur de Finance OS ;
+- contrats entre Sofian OS, TaskNotes, Jarvis et systèmes spécialisés ;
+- systèmes supplémentaires ou frontières qui n’existent que dans les documents historiques.
 
 ## À produire
 

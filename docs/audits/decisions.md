@@ -2,22 +2,23 @@
 title: Registre de décisions reconstruites
 status: seeded
 date: 2026-08-27
+source_session: 20260827_154335_c51ad8
 ---
 
 # Décisions
 
 Cette page reconstruit les décisions historiques et actuelles. Les ADR actifs du dépôt vivent sous `docs/decisions/`.
 
-## Décisions courantes explicitement acceptées
+## Décisions courantes avec provenance
 
-| ID | Décision | Date | État |
+| ID | Décision | État | Source / locator |
 |---|---|---|---|
-| `CUR-001` | Auditer le passé et l’état actuel avant de définir la cible | 2026-08-27 | `user_decision` |
-| `CUR-002` | Dériver la cible des besoins et capacités, sans l’imposer | 2026-08-27 | `user_decision` |
-| `CUR-003` | Construire VitePress en privé avant toute décision d’hébergement | 2026-08-27 | `user_decision` |
-| `CUR-004` | Archiver la fondation initiale puis créer un nouveau socle actif | 2026-08-27 | `user_decision` |
-| `CUR-005` | Utiliser deux commits locaux, sans remote ni push | 2026-08-27 | `user_decision` |
-| `CUR-006` | TaskNotes reste l’autorité des tâches et projets opérationnels | antérieur, reconfirmé 2026-08-27 | `current_canon` |
+| `CUR-001` | Auditer le passé et l’état actuel avant de définir la cible | `user_decision` | `SRC-HERMES` — session `20260827_154335_c51ad8`, messages `52676`, `52682`, `52961` |
+| `CUR-002` | Dériver la cible des besoins et capacités, sans l’imposer | `user_decision` | `SRC-HERMES` — message `52961` |
+| `CUR-003` | Construire VitePress en privé avant toute décision d’hébergement | `user_decision` | `SRC-HERMES` — réponse `clarify` `52945` |
+| `CUR-004` | Archiver la fondation initiale puis créer un nouveau socle actif | `user_decision` | `SRC-HERMES` — message `52972`, réponse `clarify` `53020` |
+| `CUR-005` | Utiliser deux commits locaux, sans remote ni push | `user_decision` | `SRC-HERMES` — réponse `clarify` `53020` |
+| `CUR-006` | TaskNotes reste l’autorité des tâches opérationnelles | `current_canon` | `SRC-OBS-ACTIVE` — `AGENTS.md:26-31`, Journal V4 `:104-110` |
 
 ## Décisions historiques à reconstruire
 
