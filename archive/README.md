@@ -1,21 +1,22 @@
 ---
+title: Archives du projet
 status: active
-date: 2026-08-25
-scope: Politique et navigation de l’archive
-sources:
-  - ../indexes/MIGRATION-LOG.md
+date: 2026-08-27
 ---
 
-# Archive
+# Archives
 
-L’archive conserve les versions remplacées ou contestées sans effacer leur provenance.
+Les archives préservent des états historiques sans leur donner d’autorité actuelle.
 
-## Contenu
+## Baselines
 
-- [snapshot Obsidian du commit 43b0964](documents/obsidian-snapshot-43b0964/README.md) : neuf blobs historiques ;
-- [carte Autorité contestée](artifacts/disputed/README.md) : HTML conservé sans correction ;
-- [décisions archivées](decisions/README.md) : aucune actuellement.
+- [`2026-08-25-foundation-e331ee4`](baselines/2026-08-25-foundation-e331ee4/BASELINE.md) — intégralité des 73 fichiers du premier commit, vérifiée byte-for-byte.
 
-## Contrat
+## Règles
 
-Chaque entrée indique source, date, empreinte, raison d’archivage, statut et remplaçant éventuel. Les payloads historiques restent byte-for-byte : leurs métadonnées d’archive sont portées par un README ou manifeste voisin.
+- ne jamais modifier un payload archivé ;
+- placer provenance, statut et remplacement dans un sidecar ;
+- persistance ≠ validation ;
+- copie ≠ migration ;
+- archivage ≠ suppression de la source ;
+- toute nouvelle baseline reçoit un commit source complet et un manifeste d’empreintes.

@@ -1,66 +1,68 @@
 ---
-status: provisional
-date: 2026-08-25
-scope: Navigation générale de Sofian Ecosystem — Architecture & Build
-sources:
-  - indexes/SOURCE-MAP.md
+title: Sofian Ecosystem
+status: active
+date: 2026-08-27
+visibility: private-first
 ---
 
-# Sofian Ecosystem — Architecture & Build
+# Sofian Ecosystem
 
-## Finalité
+## Conclusion
 
-Ce projet documente comment les systèmes numériques de Sofian coopèrent au service de sa vie. Il conserve les audits, architectures, décisions, états et artefacts issus du chantier **Ultimate Sofian OS — Architect & Build Sofian Life Space** sans remplacer les sources canoniques.
+Ce dépôt est la base commune permettant à plusieurs sessions et groupes d’agents de **reconstruire le passé, auditer l’état actuel, découvrir les besoins puis définir avec Sofian l’écosystème cible**.
 
-## Périmètre
+Il ne remplace aucune source canonique et ne contient encore aucune architecture cible acceptée.
 
-- registre des systèmes et de leurs responsabilités ;
-- parcours quotidiens envisagés ou livrés ;
-- décisions confirmées, provisoires, contestées ou remplacées ;
-- provenance des documents et artefacts historiques ;
-- état vérifié des implémentations.
+## Trois portes d’entrée
 
-Ce projet n’est ni une nouvelle base métier, ni un gestionnaire de tâches, ni une copie d’Obsidian, de Git ou des historiques agents.
+1. **Comprendre le chantier** — [`docs/project/scope.md`](docs/project/scope.md)
+2. **Lancer ou reprendre un audit** — [`docs/audits/catalog.md`](docs/audits/catalog.md)
+3. **Voir comment la cible sera construite** — [`docs/architecture/README.md`](docs/architecture/README.md)
 
-## État global
+## État actuel
 
-**Provisoire.** Le registre documentaire est en construction. Sofian OS et TaskNotes sont opérationnels ; Jarvis ne possède encore aucun parcours quotidien complet livré. La priorité entre Brief, Mail et Daily Start reste non réconciliée.
+- baseline initiale archivée et vérifiée sous [`archive/baselines/2026-08-25-foundation-e331ee4/`](archive/baselines/2026-08-25-foundation-e331ee4/BASELINE.md) ;
+- méthode, scope, sources, preuves et protocoles installés ;
+- briefs initiaux prêts pour délégation ;
+- audits complets : **aucun encore accepté** ;
+- besoins validés : **aucun encore enregistré** ;
+- cible acceptée : **aucune** ;
+- publication : **privée d’abord, hébergement différé**.
 
-## Navigation
+## Autorités
 
-1. [Registre des systèmes](SYSTEMS.md)
-2. [Index des décisions](DECISIONS.md)
-3. [Évolution du projet](CHANGELOG.md)
-4. [Manifeste des fichiers](indexes/MANIFEST.md)
-5. [Carte des sources](indexes/SOURCE-MAP.md)
-6. [Contradictions ouvertes](indexes/CONTRADICTIONS.md)
-7. [Artefacts accessibles](indexes/ARTIFACTS.md)
-
-## Principes
-
-- une source canonique par fait précis ;
-- lecture seule par défaut ;
-- aucune mutation sans accord exact et vérification ;
-- besoins quotidiens avant outils et infrastructure ;
-- petit parcours vertical observable avant automatisation ;
-- toute information non vérifiable porte `[À CONFIRMER]`.
-
-## Convention
-
-Les fichiers ordinaires utilisent `kebab-case`. Les index racine utilisent des noms stables en majuscules. Chaque document déclare son statut, sa date, sa portée et ses sources ; toute navigation interne utilise des chemins relatifs.
-
-## Statuts
-
-| Statut | Sens |
+| Information | Autorité |
 |---|---|
-| `active` | Référence actuelle confirmée |
-| `provisional` | Base de travail à valider ou compléter |
-| `disputed` | Affirmation ou orientation explicitement contestée |
-| `superseded` | Remplacé par une version identifiée |
-| `archived` | Conservé pour provenance, hors usage actif |
+| Méthode, audits intégrés, architecture et décisions de ce chantier | ce dépôt |
+| Projets, tâches, statuts, dates et priorités | Sofian-OS / TaskNotes |
+| Faits métier ou techniques externes | leur système ou document propriétaire |
+| Décision finale | Sofian |
 
-OpenCode est **conservé pour un usage futur**. Il n’est pas classé comme obsolète ; sa responsabilité future reste `[À CONFIRMER]`.
+## Fonctionnement
 
-## Limites
+```text
+Sources réelles
+   ↓
+Audits isolés
+   ↓
+Contre-vérification Jarvis
+   ↓
+État historique et actuel réconcilié
+   ↓
+Besoins et capacités
+   ↓
+Options d’architecture
+   ↓
+Cible proposée → validation Sofian
+   ↓
+Roadmap liée à TaskNotes
+```
 
-Les sources externes restent à leur emplacement. Aucun artefact ni document historique n’est copié dans ce projet à cette étape. Aucun dépôt Git n’a été initialisé.
+## Règles rapides
+
+- lecture seule par défaut ;
+- aucune cible inventée avant les besoins ;
+- aucun raw dump dans la documentation ;
+- aucune tâche opérationnelle dupliquée ici ;
+- aucune publication publique sans revue de confidentialité ;
+- aucune conclusion sans provenance.
