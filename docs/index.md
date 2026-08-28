@@ -1,13 +1,13 @@
 ---
 title: Accueil
-description: Base privée d’audit et de conception de Sofian Ecosystem.
+description: Base auditée de reconstruction et de conception de Sofian Ecosystem.
 status: active
 date: 2026-08-27
 ---
 
 # Sofian Ecosystem
 
-> **État : fondation active.** Les audits sont à produire ; aucune cible n’est acceptée.
+> **État : six audits intégrés, état actuel encore non accepté.** Les sept dossiers système restent `reported` ; aucune cible n’est acceptée.
 
 ## Je veux…
 

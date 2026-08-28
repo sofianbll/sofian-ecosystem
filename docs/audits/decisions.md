@@ -15,10 +15,11 @@ Cette page reconstruit les décisions historiques et actuelles. Les ADR actifs d
 |---|---|---|---|
 | `CUR-001` | Auditer le passé et l’état actuel avant de définir la cible | `user_decision` | `SRC-HERMES` — session `20260827_154335_c51ad8`, messages `52676`, `52682`, `52961` |
 | `CUR-002` | Dériver la cible des besoins et capacités, sans l’imposer | `user_decision` | `SRC-HERMES` — message `52961` |
-| `CUR-003` | Construire VitePress en privé avant toute décision d’hébergement | `user_decision` | `SRC-HERMES` — réponse `clarify` `52945` |
+| `CUR-003` | Construire VitePress en privé avant toute décision d’hébergement | `superseded_for_current_publication` | `SRC-HERMES` — réponse `clarify` `52945` ; remplacée pour ce dépôt par `CUR-007` |
 | `CUR-004` | Archiver la fondation initiale puis créer un nouveau socle actif | `user_decision` | `SRC-HERMES` — message `52972`, réponse `clarify` `53020` |
-| `CUR-005` | Utiliser deux commits locaux, sans remote ni push | `user_decision` | `SRC-HERMES` — réponse `clarify` `53020` |
+| `CUR-005` | Utiliser deux commits locaux, sans remote ni push pour le lot de fondation | `completed_scoped_decision` | `SRC-HERMES` — réponse `clarify` `53020` ; ne régit pas les lots ultérieurs |
 | `CUR-006` | TaskNotes reste l’autorité des tâches opérationnelles | `current_canon` | `SRC-OBS-ACTIVE` — `AGENTS.md:26-31`, Journal V4 `:104-110` |
+| `CUR-007` | Conserver le dépôt et GitHub Pages publics pour l’instant, puis poursuivre la réconciliation | `user_decision` | `SRC-HERMES` — session `145c806b6027`, demande `63682`, réponse `clarify` `63985` |
 
 ## Décisions historiques intégrées depuis AUD-001
 

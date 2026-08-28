@@ -22,6 +22,15 @@ date: 2026-08-27
 | [Homelab-OS](../systems/homelab-os.md) | 13 | configuration/reconstruction documentées ; restauration non exercée |
 | [Finance OS](../systems/finance-os.md) | 21 | code et contrats observés ; données runtime non lues |
 
+## Rafraîchissement live du 2026-08-28
+
+- **Finance OS :** healthcheck HTTP 200 ; données, ACL et correction métier non inspectées.
+- **Hermes :** v0.20.6, gateway supervisé et provider Honcho ; ourmem reste distinct.
+- **OpenCode / ourmem :** index OpenCode toujours stale 1601/1609 ; statistiques ourmem lisibles, recherche embeddings toujours bloquée.
+- **Sofian-OS / Jarvis :** vault actif confirmé ; Jarvis reste un prototype sans commit Git.
+
+Ce rafraîchissement corrige les faits live qui avaient dérivé sans promouvoir les dossiers au-delà de `reported`.
+
 ## Claims de cadrage conservés
 
 | Claim | État | Source / locator | Limite |

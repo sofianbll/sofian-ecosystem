@@ -7,6 +7,11 @@ on:
       - 'docs/**'
       - 'package.json'
       - 'package-lock.json'
+      - 'README.md'
+      - 'AGENTS.md'
+      - 'CHANGELOG.md'
+      - 'scripts/check_publication.py'
+      - 'tests/test_check_publication.py'
       - '.github/workflows/docs.yml'
   workflow_dispatch:
 
@@ -40,6 +45,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Test publication gate
+        run: PYTHONDONTWRITEBYTECODE=1 python3 -m unittest -v tests.test_check_publication
+
+      - name: Scan public documentation
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_publication.py
+          --root docs --file README.md --file AGENTS.md --file CHANGELOG.md
 
       - name: Build documentation
         run: npm run docs:build

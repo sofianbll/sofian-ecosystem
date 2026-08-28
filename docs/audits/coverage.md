@@ -14,8 +14,8 @@ date: 2026-08-27
 | Notion / DOCX | `integrated` | `AUD-001` : corpus fermé de 10 objets contre-vérifié |
 | Ancien et nouveau vault | `integrated` | `AUD-002` : 33/33 documents et 2/2 historiques Git |
 | OpenCode / OpenChamber | `integrated_with_limit` | `AUD-003` : 30/30 sessions retenues ; index dérivé stale et 24 IDs hors cap |
-| Hermes / ourmem | `integrated_with_blocker` | `AUD-004` : 6/6 sessions ; 3/3 recherches ourmem bloquées, 0 résultat |
-| Systèmes live | `integrated_reported` | `AUD-005` : 7/7 dossiers au niveau `reported`, aucun niveau global opérationnel |
+| Hermes / ourmem | `integrated_with_blocker` | `AUD-004` : 6/6 sessions ; stats/liste/profil ourmem accessibles au refresh, mais 3/3 recherches toujours bloquées |
+| Systèmes live | `integrated_reported_refreshed` | `AUD-005` : 7/7 dossiers `reported` ; Finance OS joignable, aucun niveau global opérationnel |
 | Timeline | `integrated_partial` | chronologie historique étendue ; les périodes sans preuve restent explicites |
 | Noms et identités | `integrated_partial` | vaults et usages agentiques distingués ; plusieurs relations restent ouvertes |
 | Besoins | `not_started` | aucun besoin canonisé |

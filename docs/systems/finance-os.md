@@ -4,7 +4,7 @@ system_id: SYS-007
 status: current_or_historical_as_reported
 audit_state: reported
 date: 2026-08-28
-source_ids: []
+source_ids: [SRC-LIVE]
 ---
 
 # Finance OS
@@ -13,7 +13,7 @@ source_ids: []
 
 ## Verdict
 
-Stack PocketBase privé documenté avec importeurs Python/Bash et contrat de données statique ; runtime, données financières, ACL, tests exécutés et correction métier n’ont pas été inspectés.
+Stack PocketBase privé documenté avec importeurs Python/Bash et contrat de données statique. Le healthcheck Tailscale répond HTTP 200 ; les données financières, ACL, tests courants et correction métier n’ont pas été inspectés.
 
 ## Autorité des faits
 
@@ -88,6 +88,7 @@ Stack PocketBase privé documenté avec importeurs Python/Bash et contrat de don
 - **verified :**
 - documentation et implémentation statique présentes
 - tests lisibles mais non exécutés
+- healthcheck runtime HTTP 200 vérifié le 2026-08-28
 - **not_proven :**
 - technically_tested
 - integrated
@@ -102,7 +103,7 @@ Stack PocketBase privé documenté avec importeurs Python/Bash et contrat de don
 
 ## Inconnues
 
-- runtime Pulsar
+- fraîcheur et intégrité métier du runtime Pulsar
 - règles PocketBase
 - workflow de correction/rapprochement
 - writer cashflow_items

@@ -39,7 +39,7 @@ Résultat : dossiers système, autorités, flux, contrats, niveaux de livraison 
 
 Fin lorsque plusieurs scénarios réels traversent les cartes sans propriétaire implicite ni double autorité.
 
-**État : fondation reportée, phase non terminée.** Sept dossiers sont intégrés au niveau `reported`. Les scénarios réels, corrections et restaurations restent à exercer avant toute acceptation d’architecture actuelle.
+**État : active, non acceptée.** Sept dossiers sont intégrés au niveau `reported` et leur état live a été rafraîchi le 2026-08-28. Les scénarios réels, corrections et restaurations restent à exercer avant toute acceptation d’architecture actuelle.
 
 ## Phase 4 — Besoins et capacités
 
@@ -53,16 +53,16 @@ Résultat : statu quo et options comparées pour les décisions structurantes.
 
 Fin lorsque Sofian accepte une cible, corrige la proposition ou décide de différer.
 
-## Phase 6 — Transition et documentation privée
+## Phase 6 — Transition et publication
 
-Résultat : roadmap de transformation, TaskNotes liées, VitePress privé et contrôles continus.
+Résultat : roadmap de transformation, TaskNotes liées, VitePress et contrôles continus.
 
 Fin lorsque le build est reproductible, la confidentialité vérifiée et chaque tranche possède une preuve et une sortie.
 
+**État partiel :** remote, CI et GitHub Pages publics sont actifs par décision de Sofian. Le build et les routes sont vérifiés ; la transition, les TaskNotes liées, les scénarios et la cible restent non commencés.
+
 ## Différé explicitement
 
-- hébergement du site ;
-- remote et publication ;
 - automatisations d’audit ;
 - imports de données ou mémoires ;
 - nouvelle infrastructure Jarvis ;

@@ -15,7 +15,7 @@ integration_authorized: true
 
 ## Verdict
 
-AUD-002 est synthétisé au statut `reported` avec une couverture complète de 33/33 documents et 2/2 historiques Git : 94/104 claims sont retenus après normalisations explicites, 10 sont rejetés. Les preuves établissent deux vaults et dépôts indépendants, puis une migration documentaire sélective de 13 notes V4 transformées vers `Sofian-OS`, documenté comme canon actif ; elles ne prouvent ni usage opérationnel ni acceptation utilisateur.
+La synthèse source d’AUD-002 a été produite au statut `reported` ; ce rapport est désormais `integrated`. La couverture est complète sur 33/33 documents et 2/2 historiques Git : 94/104 claims sont retenus après normalisations explicites, 10 sont rejetés. Les preuves établissent deux vaults et dépôts indépendants, puis une migration documentaire sélective de 13 notes V4 transformées vers `Sofian-OS`, documenté comme canon actif ; elles ne prouvent ni usage opérationnel ni acceptation utilisateur.
 
 ## Ledger exhaustif
 

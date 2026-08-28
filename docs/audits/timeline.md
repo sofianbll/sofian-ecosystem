@@ -29,6 +29,8 @@ date: 2026-08-27
 | 2026-08-25 | premier commit du dépôt `sofian-ecosystem` | `historical_execution` | `SRC-BASELINE`, commit `e331ee4…` |
 | 2026-08-27 | baseline archivée et nouveau système d’audit autorisé | `user_decision` | conversation Hermes courante, commit `e090180…` |
 | 2026-08-28 | intégration documentaire des audits `AUD-002` à `AUD-006` après cinq synthèses contre-auditées | `historical_execution` | rapports intégrés ; aucune mutation des sources externes |
+| 2026-08-28 | dépôt, CI et GitHub Pages publics explicitement acceptés pour l’instant | `user_decision` | `SRC-HERMES`, session `145c806b6027`, locator `63985` |
+| 2026-08-28 | réconciliation live : Finance OS joignable, Hermes sur Honcho avec gateway supervisé, OpenCode stale 1601/1609, ourmem lisible hors recherche | `live_implementation` | `SRC-LIVE`, `SRC-HERMES`, `SRC-OPENCODE`, `SRC-OURMEM` |
 
 ## Limites encore ouvertes
 

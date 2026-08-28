@@ -4,7 +4,7 @@ system_id: SYS-006
 status: current_or_historical_as_reported
 audit_state: reported
 date: 2026-08-28
-source_ids: []
+source_ids: [SRC-LIVE]
 ---
 
 # Homelab-OS
@@ -13,7 +13,7 @@ source_ids: []
 
 ## Verdict
 
-Control repo courant de configuration et documentation ; les contrats et artefacts déclaratifs sont présents, mais aucun runtime distant ni usage maintenu n’a été vérifié.
+Control repo courant de configuration et documentation ; les contrats et artefacts déclaratifs sont présents. Finance OS répond à son healthcheck Tailscale, mais le reste des runtimes distants, les restaurations et l’usage maintenu ne sont pas vérifiés globalement.
 
 ## Autorité des faits
 
@@ -86,8 +86,9 @@ Control repo courant de configuration et documentation ; les contrats et artefac
 - **verified :**
 - documentation et artefacts déclaratifs présents
 - bootstrap et Compose comme implémentation statique
+- Finance OS joignable par healthcheck au contrôle du 2026-08-28
 - **not_proven :**
-- déploiement
+- déploiement global des stacks
 - restauration exercée
 - operational
 

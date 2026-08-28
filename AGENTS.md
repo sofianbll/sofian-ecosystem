@@ -75,7 +75,8 @@ Pour éviter les conflits :
 
 ## Documentation et diagrammes
 
-- Le site cible est privé d’abord ; aucun déploiement public sans nouvelle décision.
+- Le dépôt et GitHub Pages sont publics par décision explicite de Sofian le 2026-08-28 (`SRC-HERMES`, session `145c806b6027`, locator `63985`).
+- Tout futur push public doit rester explicitement autorisé et passer la gate `scripts/check_publication.py` ; les chemins et adresses techniques sont des avertissements acceptés, jamais une autorisation d’exposer un secret ou une PII directe.
 - Une question par diagramme Mermaid.
 - Séparer historique, état actuel, cible candidate et cible acceptée.
 - Ajouter date, statut, sources, légende et lecture textuelle.

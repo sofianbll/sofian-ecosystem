@@ -1,8 +1,8 @@
 ---
 title: Sofian Ecosystem
-status: audit_corpus_integrated_pending_review
+status: audit_corpus_integrated_current_state_refreshed
 date: 2026-08-27
-visibility: private-first
+visibility: public_temporarily_accepted
 ---
 
 # Sofian Ecosystem
@@ -11,7 +11,7 @@ visibility: private-first
 
 Ce dépôt est la base commune permettant à plusieurs sessions et groupes d’agents de **reconstruire le passé, auditer l’état actuel, découvrir les besoins puis définir avec Sofian l’écosystème cible**.
 
-Les **six audits `AUD-001` à `AUD-006` sont intégrés et contre-vérifiés**. Ils reconstruisent la genèse, les vaults, les historiques agents, les systèmes live et la fondation initiale, tout en conservant les blocages et claims rejetés.
+Les **six audits `AUD-001` à `AUD-006` sont intégrés et mécaniquement vérifiés**. Cela valide leurs corpus documentaires et leurs limites ; les sept dossiers système restent au niveau `reported`, sans acceptation de l’architecture actuelle ni preuve opérationnelle globale.
 
 ## Trois portes d’entrée
 
@@ -28,8 +28,9 @@ Les **six audits `AUD-001` à `AUD-006` sont intégrés et contre-vérifiés**. 
 - dossiers système reportés : **7** ; dossiers système acceptés : **aucun** ;
 - besoins validés : **aucun** ;
 - cible acceptée : **aucune** ;
-- prochaine gate : **tester les frontières et corrections par des scénarios réels avant validation des besoins et de l’architecture actuelle** ;
-- publication : **GitHub Pages public actif ; la politique cible reste privée d’abord et doit être réconciliée**.
+- état live rafraîchi : Finance OS répond à son healthcheck, Hermes utilise Honcho et un gateway supervisé, OpenCode reste indexé partiellement et la recherche ourmem reste bloquée ;
+- prochaine gate : **tester les frontières, corrections et restaurations par des scénarios réels avant toute acceptation de l’architecture actuelle** ;
+- publication : **dépôt et GitHub Pages publics, acceptés pour l’instant par Sofian (`CUR-007`, locator `63985`) ; gate CI anti-secrets/PII active**.
 
 ## Autorités
 

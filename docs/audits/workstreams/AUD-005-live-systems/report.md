@@ -15,7 +15,7 @@ integration_authorized: true
 
 ## Verdict
 
-AUD-005 est synthétisé au statut `reported` avec 7/7 dossiers couverts : Sofian OS V4 + TaskNotes, Jarvis, Hermes, OpenCode, ourmem, Homelab-OS et Finance OS. Le contrôle mécanique retient 132/141 claims canoniques et en rejette 9 ; aucune preuve ne permet un niveau global `user_accepted` ou `operational`, et les runtimes distants, corrections métier et restaurations restent les limites majeures.
+La synthèse source d’AUD-005 a été produite au statut `reported` ; ce rapport est désormais `integrated`, tandis que ses 7/7 dossiers système restent `reported` : Sofian OS V4 + TaskNotes, Jarvis, Hermes, OpenCode, ourmem, Homelab-OS et Finance OS. Le contrôle mécanique retient 132/141 claims canoniques et en rejette 9 ; aucune preuve ne permet un niveau global `user_accepted` ou `operational`, et les corrections métier, scénarios traversants et restaurations restent les limites majeures.
 
 ## Ledger exhaustif
 

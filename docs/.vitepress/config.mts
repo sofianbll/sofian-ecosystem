@@ -5,7 +5,7 @@ const base = process.env.DOCS_BASE ?? '/'
 export default defineConfig({
   lang: 'fr-FR',
   title: 'Sofian Ecosystem',
-  description: 'Base privée d’audit et de conception de Sofian Ecosystem',
+  description: 'Base auditée de reconstruction et de conception de Sofian Ecosystem',
   base,
   cleanUrls: true,
   lastUpdated: false,

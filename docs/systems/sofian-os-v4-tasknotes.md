@@ -4,7 +4,7 @@ system_id: SYS-001
 status: current_or_historical_as_reported
 audit_state: reported
 date: 2026-08-28
-source_ids: []
+source_ids: [SRC-OBS-ACTIVE, SRC-LIVE]
 ---
 
 # Sofian OS V4 + TaskNotes
@@ -13,7 +13,7 @@ source_ids: []
 
 ## Verdict
 
-Système personnel documenté avec Obsidian comme implémentation actuelle et TaskNotes comme autorité déclarée des tâches ; aucune exécution récente, acceptation ou utilisation maintenue n’est prouvée.
+Système personnel documenté avec Obsidian comme implémentation actuelle et TaskNotes comme autorité déclarée des tâches. Le vault actif suit `origin/main` et contient des changements utilisateur courants, sans suffire à prouver l’exécution complète des routines, leur acceptation ou leur maintien opérationnel.
 
 ## Autorité des faits
 
@@ -67,6 +67,7 @@ Système personnel documenté avec Obsidian comme implémentation actuelle et Ta
 
 - **verified :**
 - documentation V4, schéma, workflows et routines lisibles
+- identité du vault actif et autorité TaskNotes confirmées le 2026-08-28
 - **not_proven :**
 - prototyped
 - technically_tested

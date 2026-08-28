@@ -4,7 +4,7 @@ system_id: SYS-002
 status: current_or_historical_as_reported
 audit_state: reported
 date: 2026-08-28
-source_ids: []
+source_ids: [SRC-LIVE]
 ---
 
 # Jarvis
@@ -13,7 +13,7 @@ source_ids: []
 
 ## Verdict
 
-Couche agentique documentée ; le code observé est un prototype Python déterministe et read-only qui produit des propositions JSON sans writer externe.
+Couche agentique documentée ; le code observé est un prototype Python déterministe et read-only qui produit des propositions JSON sans writer externe. L’arbre existe toujours sans commit Git, donc aucun diff historique fiable n’est possible.
 
 ## Autorité des faits
 
@@ -69,7 +69,7 @@ Couche agentique documentée ; le code observé est un prototype Python détermi
 ## Permissions et risques
 
 - prototype lu comme read-only
-- absence de packaging/CI et dépôt sans commit vérifiable
+- absence de packaging/CI et dépôt toujours sans commit au contrôle du 2026-08-28
 - heuristiques mail et connecteurs non exercés
 
 ## État live et livraison
@@ -77,6 +77,7 @@ Couche agentique documentée ; le code observé est un prototype Python détermi
 - **verified :**
 - documented
 - prototyped pour mail-to-task et clarify-next
+- code, fixtures, contrats et tests présents dans l’arbre non versionné
 - **not_proven :**
 - technically_tested courant
 - integrated

@@ -17,6 +17,8 @@ date: 2026-08-27
 | `CON-005` | responsabilité future d’OpenCode | risque de le déclarer obsolète | garder `unresolved` jusqu’à décision de Sofian |
 | `CON-006` | journal V4 enregistré le 14 mai puis redaté au 15 mai | confusion entre temps d’enregistrement et temps factuel | conserver les deux états ; date factuelle des décisions `unresolved` |
 | `CON-007` | `Validé`, `Actée` et `canon` sont employés dans les documents historiques | risque d’inférer `user_accepted`, `integrated` ou `operational` | traiter ces mots comme statuts internes tant qu’une preuve distincte n’existe pas |
+| `CON-010` | politique `private-first` versus dépôt et Pages publics | règles de publication contradictoires | résolu pour l’état courant par décision `CUR-007` ; secrets/PII restent bloqués par CI |
+| `CON-011` | synthèses sources au statut `reported` versus rapports intégrés | confusion entre état de collecte et état d’intégration | les rapports précisent désormais les deux niveaux ; dossiers système toujours `reported` |
 
 ## État après AUD-002 à AUD-006
 
@@ -42,6 +44,8 @@ date: 2026-08-27
 | `FIX-001` | StudioFlow n’aurait jamais été déployé | GitHub Action réussie et Pages public vérifiés le 2026-08-27 |
 | `FIX-002` | aucun export Notion explicite retrouvé | conversion locale retrouvée avec 8 442 fichiers ; live Notion accessible |
 | `FIX-003` | le dépôt initial n’aurait pas été initialisé en Git | commit `e331ee4…` existant ; affirmation archivée comme historique stale |
+| `FIX-004` | aucun runtime Finance OS n’était vérifié | healthcheck Tailscale HTTP 200 vérifié le 2026-08-28 ; fraîcheur métier non lue |
+| `FIX-005` | provider mémoire Hermes et supervision gateway inconnus ou non alignés | Honcho et gateway supervisé confirmés ; ourmem reste un MCP séparé |
 
 ## Discipline
 

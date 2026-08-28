@@ -17,20 +17,22 @@ date: 2026-08-27
 - [x] liens internes valides ;
 - [x] aucun secret ou contenu personnel inutile ;
 - [x] `git diff --check` propre ;
-- [x] commits locaux vérifiés, aucun remote ni push.
+- [x] checkpoint initial vérifié avec commits locaux sans remote ni push ; cette contrainte était bornée au lot de fondation et a ensuite été supersédée.
 
 Cela prouve la fondation méthodologique, pas la couverture de l’écosystème.
 
 ## Audit individuel
 
-- [ ] question et corpus bornés ;
-- [ ] identité exacte de chaque objet ;
-- [ ] toutes les sources attendues consultées ou marquées indisponibles ;
-- [ ] chaque claim important possède une citation ;
-- [ ] faits, hypothèses, idées et inconnues séparés ;
-- [ ] contradictions conservées ;
-- [ ] couverture et limites déclarées ;
-- [ ] contre-audit parent terminé.
+Les six audits `AUD-001` à `AUD-006` satisfont ces gates documentaires ; cela ne vaut ni acceptation des dossiers système ni fonctionnement opérationnel.
+
+- [x] question et corpus bornés ;
+- [x] identité exacte de chaque objet ;
+- [x] toutes les sources attendues consultées ou marquées indisponibles ;
+- [x] chaque claim important possède une citation ;
+- [x] faits, hypothèses, idées et inconnues séparés ;
+- [x] contradictions conservées ;
+- [x] couverture et limites déclarées ;
+- [x] contre-audit parent terminé.
 
 ## Dossier système
 
@@ -58,14 +60,14 @@ Cela prouve la fondation méthodologique, pas la couverture de l’écosystème.
 
 ## Documentation VitePress
 
-- [ ] build réel réussi ;
+- [x] build réel réussi ;
 - [ ] recherche et navigation testées ;
 - [ ] Mermaid rendu en clair et sombre ;
 - [ ] responsive et réduction de mouvement ;
-- [ ] liens et ancres valides ;
-- [ ] aucune donnée sensible publiée ;
-- [ ] distinction histoire / actuel / candidat / accepté visible ;
-- [ ] URL réelle relue seulement après autorisation de déploiement.
+- [x] liens locaux valides ;
+- [x] gate anti-secrets/PII testée ; locators techniques publics explicitement acceptés ;
+- [x] distinction histoire / actuel / candidat / accepté visible ;
+- [x] URL réelle relue après autorisation de déploiement.
 
 ## Niveaux de livraison autorisés
 

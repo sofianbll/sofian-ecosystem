@@ -6,6 +6,19 @@ date: 2026-08-27
 
 # Reprendre ce chantier
 
+## Checkpoint courant — 2026-08-28
+
+```text
+Objectif actif : valider l’architecture actuelle par scénarios réels avant les besoins et la cible
+Workstreams : AUD-001 à AUD-006 intégrés
+Couverture : 531 claims acceptés uniques ; limites et rejets conservés
+État live : sept dossiers reportés, rafraîchis le 2026-08-28
+Publication : dépôt et Pages publics par décision explicite de Sofian
+Consentement actif pour une nouvelle session : none
+Actions interdites : mutations des sources externes, cible inventée, TaskNotes dupliquées
+Prochaine décision unique : choisir le premier scénario traversant de Phase 3
+```
+
 ## Lecture obligatoire
 
 1. `README.md`
@@ -52,7 +65,7 @@ Action interdite :
 Prochaine décision unique :
 ```
 
-Pour une **nouvelle** session : `Consentement actif: none`, `Claims acceptés: none`, et la prochaine décision est celle définie par le brief après collecte.
+Pour une **nouvelle collecte** : `Consentement actif: none`. Les 531 claims déjà intégrés restent consultables ; aucun nouveau claim n’est accepté sans brief, preuve et review.
 
 ## Prompt de reprise générique
 

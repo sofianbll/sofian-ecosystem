@@ -4,7 +4,7 @@ system_id: SYS-003
 status: current_or_historical_as_reported
 audit_state: reported
 date: 2026-08-28
-source_ids: []
+source_ids: [SRC-HERMES, SRC-LIVE]
 ---
 
 # Hermes Agent
@@ -13,7 +13,7 @@ source_ids: []
 
 ## Verdict
 
-Runtime/interface agentique techniquement présent ; il possède les surfaces techniques de conversation, sessions, outils, profils et jobs, mais pas l’état métier des projets et tâches.
+Runtime/interface agentique actif en v0.20.6 ; il possède les surfaces techniques de conversation, sessions, outils, profils et jobs, mais pas l’état métier des projets et tâches. Le provider mémoire courant est Honcho ; ourmem reste un MCP séparé.
 
 ## Autorité des faits
 
@@ -57,6 +57,14 @@ Runtime/interface agentique techniquement présent ; il possède les surfaces te
 
 - **correction :** hors Hermes
 
+### Élément 6
+
+- **fact :** provider mémoire Hermes
+
+- **authority :** configuration live et `hermes doctor`
+
+- **correction :** `hermes config set` après décision ; aucune fusion implicite avec ourmem
+
 ## Frontières
 
 - **owns :**
@@ -80,8 +88,9 @@ Runtime/interface agentique techniquement présent ; il possède les surfaces te
 
 - redaction par défaut et secrets séparés de la configuration
 - backend local et sudo désactivé au snapshot
-- gateway running mais supervision launchd non alignée
-- écart possible docs officielles/runtime local
+- gateway actif sous supervision externe/launchd vérifiée
+- runtime en retard de 225 commits sur l’amont au contrôle
+- `state.db` volumineuse, signalée par `hermes doctor`
 
 ## État live et livraison
 
@@ -90,6 +99,8 @@ Runtime/interface agentique techniquement présent ; il possède les surfaces te
 - sessions documentées
 - Cron configuré observé
 - profil default observé
+- gateway supervisé actif et `hermes doctor` sans avis de sécurité actif
+- provider mémoire `honcho` confirmé ; MCP ourmem distinct
 - **not_proven :**
 - niveau produit global
 - API/ACP/TUI exercés
@@ -98,12 +109,12 @@ Runtime/interface agentique techniquement présent ; il possède les surfaces te
 
 ## Contradictions
 
-- gateway actif versus gestion launchd
-- documentation possiblement plus récente que v0.20.6
+- l’écart gateway/launchd historique est résolu au contrôle live
+- documentation et amont peuvent être plus récents que v0.20.6
 
 ## Inconnues
 
-- memory.provider et relation ourmem
+- relation éventuelle Honcho ↔ ourmem ; aucune intégration prouvée
 - disponibilité exacte API/ACP/TUI dans v0.20.6
 - résilience du gateway
 - parcours réel complet

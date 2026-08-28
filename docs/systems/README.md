@@ -10,6 +10,8 @@ date: 2026-08-27
 
 Sept dossiers issus d’`AUD-005` sont intégrés au niveau **`reported`**. Ils ne sont ni des cibles acceptées, ni une preuve d’usage opérationnel. Les documents précédents restent dans la baseline ; `AUD-006` identifie des candidats à revue sans les recopier.
 
+Un contrôle live du 2026-08-28 a rafraîchi les faits qui avaient dérivé : Finance OS est joignable, Hermes utilise Honcho et un gateway supervisé, ourmem répond hors recherche sémantique, OpenCode conserve un index stale, Jarvis reste sans commit et Sofian-OS reste le vault actif. Les niveaux demeurent `reported`.
+
 ## Dossiers intégrés
 
 | Dossier | État documentaire | Claims acceptés |

@@ -18,7 +18,7 @@ Cette dispersion empêche de voir clairement comment l’écosystème a évolué
 
 ## 2. Finalité
 
-Ce projet fournit une documentation privée, navigable et prouvée qui relie :
+Ce projet fournit une documentation navigable et prouvée qui relie :
 
 ```text
 histoire → état actuel → besoins → capacités → options
@@ -85,7 +85,7 @@ Pour une décision structurante :
 
 ### Documentation et exécution
 
-- VitePress privé ;
+- VitePress public pour l’instant par décision `CUR-007`, avec gate anti-secrets/PII ;
 - recherche et navigation en français ;
 - diagrammes Mermaid utiles ;
 - dossiers système, workflows, contrats, ADR et scénarios ;
@@ -99,7 +99,7 @@ Pour une décision structurante :
 - importer un historique ou une mémoire ;
 - créer ou changer une TaskNote ;
 - modifier un skill, agent, cron ou service ;
-- déployer ou publier le site ;
+- déployer ou publier un nouveau lot sans accord exact ;
 - déclarer un système legacy, abandonné ou remplacé ;
 - décider d’une cible ou d’une priorité personnelle à la place de Sofian ;
 - exposer des secrets ou des données privées non nécessaires.
@@ -117,7 +117,7 @@ Pour une décision structurante :
 9. matrice de niveau de livraison ;
 10. options de cible et décisions acceptées ;
 11. roadmap de transition avec chantiers, sous-projets, dépendances et liens TaskNotes ;
-12. documentation VitePress privée ;
+12. documentation VitePress, actuellement publique par décision explicite ;
 13. système de handoff et de délégation ;
 14. procédure ou skill consolidé après preuve répétée.
 

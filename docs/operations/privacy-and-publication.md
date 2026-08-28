@@ -2,21 +2,23 @@
 title: Confidentialité et publication
 status: active
 date: 2026-08-27
-publication_mode: private-first
+publication_mode: public_temporarily_accepted
 ---
 
 # Confidentialité
 
 ## Décision actuelle
 
-La documentation est construite et validée **en privé**. L’hébergement sera décidé plus tard. Le modèle public de StudioFlow ne s’applique pas automatiquement.
+Le dépôt et GitHub Pages restent **publics pour l’instant**, par décision explicite de Sofian le 2026-08-28 (`SRC-HERMES`, session `145c806b6027`, locator `63985`). Cette décision accepte les locators techniques déjà publiés ; elle n’autorise jamais un secret, une clé, un token ou une PII directe.
+
+La gate automatique `scripts/check_publication.py` bloque désormais les motifs évidents de secrets et PII avant le build. Les chemins locaux et adresses de réseau privé restent des avertissements visibles, conformément à la décision actuelle.
 
 ## Classes de données
 
 | Classe | Traitement documentaire |
 |---|---|
 | Architecture et décisions non sensibles | citation et synthèse possibles |
-| Chemins locaux | permis dans le corpus privé, à expurger avant partage |
+| Chemins locaux | autorisés temporairement dans le corpus public comme locators ; avertissement CI |
 | Identité, santé, famille, finance, juridique | minimisation stricte ; pointer vers la source |
 | Emails, appels, transcriptions | lire seulement si le besoin d’audit le justifie |
 | Secrets, tokens, clés, mots de passe | lecture et copie interdites |
@@ -32,16 +34,14 @@ La documentation est construite et validée **en privé**. L’hébergement sera
 - Une donnée accessible n’est pas automatiquement pertinente.
 - Une archive privée ne devient pas publiable par défaut.
 
-## Gate de publication futur
+## Gate de publication courante
 
 Avant tout partage ou déploiement :
 
-1. choisir public expurgé, privé authentifié ou local ;
-2. construire un inventaire des pages et assets ;
-3. scanner secrets, chemins, PII et dépendances externes ;
-4. vérifier les Mermaid et sources embarquées ;
-5. relire manuellement les pages sensibles ;
-6. obtenir l’accord exact de Sofian ;
-7. déployer puis relire l’URL réelle.
+1. exécuter les tests de la gate de publication ;
+2. bloquer secrets et PII directes ;
+3. afficher les avertissements de locators techniques sans révéler de valeur sensible ;
+4. obtenir l’accord exact couvrant commit, push et publication ;
+5. construire puis relire le workflow, le déploiement et les routes réelles.
 
-Aucun remote, action ou hébergement n’est configuré dans cette fondation.
+État vérifié le 2026-08-28 : huit commits et 991 snapshots texte inspectés sans clé privée, token, secret assigné ou email détecté ; le dépôt, le workflow et les routes GitHub Pages sont accessibles.

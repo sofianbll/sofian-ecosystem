@@ -15,10 +15,10 @@ Ce registre décrit où lire. Il ne copie pas les sources et ne décide pas seul
 | `SRC-DOCX-V2` | `/Users/sofian/Documents/00-Inbox/SOFIAN OS V2 Document Reference.docx` | document historique | document daté 2026-01-08 | lisible ; données sensibles à minimiser |
 | `SRC-OBS-OLD` | `/Users/sofian/Documents/Obsidian/Sofian's Vault/` | ancien vault, historique | Git 2026-05-04 → 2026-07-17 | `AUD-002` intégré ; 21 documents et historique Git ciblé lus en lecture seule |
 | `SRC-OBS-ACTIVE` | `/Users/sofian/Documents/Obsidian/Sofian-OS/` | vault canonique actuel | Git depuis 2026-05-16 | `AUD-002`/`AUD-005` intégrés ; 12 documents et historique Git ciblé lus ; usage maintenu non prouvé globalement |
-| `SRC-OPENCODE` | `/Users/sofian/.local/share/opencode/opencode.db` | historique OpenCode canonique | 2026-06-10 → 2026-08-26 vérifié | `AUD-003` intégré ; base read-only ; index dérivé stale 1601/1609 ; 24 IDs hors cap non individualisés |
-| `SRC-HERMES` | sessions Hermes via `session_search` et base locale read-only | décisions et actions de sessions | chantier depuis 2026-08-19 | `AUD-004` intégré sur 6/6 sessions ; les sessions ne prouvent pas seules un état opérationnel actuel |
-| `SRC-OURMEM` | MCP `ourmem` | mémoire sémantique secondaire | statut vérifié le 2026-08-28 | 3/3 recherches tentées dans `AUD-004`, toutes bloquées avant résultat ; ni absence de souvenirs ni panne permanente prouvée |
-| `SRC-LIVE` | dépôts, configurations, APIs et runtimes spécialisés | état actuel vérifiable | snapshot `AUD-005` du 2026-08-28 | 7/7 dossiers reportés ; aucun healthcheck distant, restauration ni niveau opérationnel global prouvé |
+| `SRC-OPENCODE` | `/Users/sofian/.local/share/opencode/opencode.db` | historique OpenCode canonique | 2026-06-10 → 2026-08-28 vérifié | `AUD-003` intégré ; base read-only 1609 sessions ; index dérivé stale 1601/1609 ; 24 IDs hors cap non individualisés |
+| `SRC-HERMES` | sessions Hermes via `session_search`, base locale read-only et CLI live | décisions, actions et runtime Hermes | chantier depuis 2026-08-19 | `AUD-004` intégré ; v0.20.6, gateway supervisé et provider Honcho vérifiés ; les sessions ne prouvent pas seules un parcours produit opérationnel |
+| `SRC-OURMEM` | MCP `ourmem` | mémoire sémantique secondaire | statut vérifié le 2026-08-28 | statistiques/liste/profil accessibles, 698 mémoires observées ; recherche sémantique toujours bloquée par quota embeddings 403 |
+| `SRC-LIVE` | dépôts, configurations, APIs et runtimes spécialisés | état actuel vérifiable | snapshot `AUD-005` puis refresh du 2026-08-28 | 7/7 dossiers reportés ; Finance OS healthcheck 200 ; autres scénarios, corrections et restaurations non exercés globalement |
 | `SRC-GUIDE` | `/Users/sofian/Documents/00-Inbox/Guide-ultime-ingenierie-logicielle.pdf` | méthode d’ingénierie | édition 2026 | méthode, pas décision personnelle |
 | `SRC-BASELINE` | `archive/baselines/2026-08-25-foundation-e331ee4/` | première consolidation du dépôt | commit `e331ee4…` | `AUD-006` intégré ; manifeste 73/73 vérifié ; 24 candidats à revue, aucun payload recopié automatiquement |
 | `SRC-STUDIOFLOW` | `/Users/sofian/Developer/10-Personal/studioflow/` | modèle VitePress / CI | déploiement vérifié le 2026-08-26 | public ; ne pas copier sa politique de publication |
@@ -37,6 +37,15 @@ Session Hermes : `20260827_154335_c51ad8`.
 | `53020` | réponse `clarify` | remplacer l’ancien arbre et créer deux commits locaux sans push |
 
 Ces locators sont lisibles dans `/Users/sofian/.hermes/state.db` en mode read-only. Après clôture de la session, utiliser `@session:default/20260827_154335_c51ad8` si l’index Hermes l’expose.
+
+## Locators de la réconciliation courante
+
+Session Hermes : `145c806b6027`.
+
+| Message | Type | Décision ou besoin supporté |
+|---:|---|---|
+| `63682` | user | reprendre les audits puis vérifier que tout est correct et concilié |
+| `63985` | réponse `clarify` | conserver le dépôt public pour l’instant et effectuer les corrections nécessaires |
 
 ## Priorité de preuve
 

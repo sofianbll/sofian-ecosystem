@@ -15,7 +15,7 @@ integration_authorized: true
 
 ## Verdict
 
-AUD-004 est synthétisé au statut `reported` en lecture seule : 6/6 sessions Hermes sont couvertes, 59 claims uniques ont été contrôlés, 56 sont retenus et 3 rejetés ; les 3/3 recherches ourmem ont été tentées mais bloquées avant tout résultat. Les décisions ponctuelles et mutations historiques sont séparées des recommandations et des claims produit actuels ; aucune cible Jarvis/Hermes/Bot/skills/mémoire/orchestration, aucun parcours partagé Honcho et aucun niveau opérationnel ne sont prouvés.
+La synthèse source d’AUD-004 a été produite au statut `reported` ; ce rapport est désormais `integrated`. En lecture seule, 6/6 sessions Hermes sont couvertes, 59 claims uniques ont été contrôlés, 56 sont retenus et 3 rejetés ; les 3/3 recherches ourmem ont été tentées mais bloquées avant tout résultat. Les décisions ponctuelles et mutations historiques sont séparées des recommandations et des claims produit actuels ; aucune cible Jarvis/Hermes/Bot/skills/mémoire/orchestration, aucun parcours partagé Honcho et aucun niveau opérationnel ne sont prouvés.
 
 ## Ledger exhaustif
 

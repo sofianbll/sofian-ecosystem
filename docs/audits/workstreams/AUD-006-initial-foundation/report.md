@@ -15,7 +15,7 @@ integration_authorized: true
 
 ## Verdict
 
-AUD-006 est synthétisé au statut `reported` avec inventaire exhaustif 73/73 : 24 payloads `reintegrate_after_review`, 34 `historical_only`, 7 `disputed` et 8 `superseded`. Le contrôle final retient 94/139 claims parents normalisés et en rejette 45 ; aucune preuve ne permet de promouvoir la fondation au-delà d’un historique documenté, et la normalisation des décisions G1–G3 reste la limite majeure avant intégration.
+La synthèse source d’AUD-006 a été produite au statut `reported` ; ce rapport est désormais `integrated`, avec inventaire exhaustif 73/73 : 24 payloads `reintegrate_after_review`, 34 `historical_only`, 7 `disputed` et 8 `superseded`. Le contrôle final retient 94/139 claims parents normalisés et en rejette 45 ; aucune preuve ne permet de promouvoir la fondation au-delà d’un historique documenté, et les décisions G1–G3 rejetées restent exclues tant qu’elles ne sont pas réémises et revues.
 
 ## Ledger exhaustif
 

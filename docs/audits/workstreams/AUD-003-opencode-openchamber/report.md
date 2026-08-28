@@ -15,7 +15,7 @@ integration_authorized: true
 
 ## Verdict
 
-AUD-003 est synthétisé au statut `reported` en lecture seule : 6/6 requêtes, 60 résultats, 54 IDs uniques et 30/30 sessions retenues inspectées ; 83/104 claims sont acceptés après normalisation mécanique, 21 rejetés. Le corpus établit une évolution historique d’OpenCode/Jarvis/Sofian OS, sans autoriser la fusion de `Jarvis Agent`, `Jarvis OS`, `Sofian OS`, `Sofian-OS`, `Sofian's Vault`, OpenCode, OpenChamber et Sofian Ecosystem. Limite majeure : l’index reste stale à 1 601/1 609 sessions et les 24 IDs hors cap n’ont pas été individualisés, donc l’exhaustivité et tout niveau opérationnel ou accepté restent non prouvés.
+La synthèse source d’AUD-003 a été produite au statut `reported` ; ce rapport est désormais `integrated`. En lecture seule, 6/6 requêtes, 60 résultats, 54 IDs uniques et 30/30 sessions retenues ont été inspectés ; 83/104 claims sont acceptés après normalisation mécanique, 21 rejetés. Le corpus établit une évolution historique d’OpenCode/Jarvis/Sofian OS, sans autoriser la fusion de `Jarvis Agent`, `Jarvis OS`, `Sofian OS`, `Sofian-OS`, `Sofian's Vault`, OpenCode, OpenChamber et Sofian Ecosystem. Limite majeure : l’index reste stale et 24 IDs hors cap ne sont pas individualisés.
 
 ## Ledger exhaustif
 

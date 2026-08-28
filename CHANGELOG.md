@@ -6,6 +6,25 @@ date: 2026-08-27
 
 # Changelog
 
+## 2026-08-28 — Réconciliation après intégration complète
+
+### Corrigé
+
+- séparation explicite entre synthèse source `reported`, rapport `integrated` et dossier système toujours `reported` ;
+- décisions de publication, roadmap, définitions de fin, confidentialité, timeline et handoff alignés sur l’état réel ;
+- sept dossiers système rafraîchis depuis les sources live sans promotion d’architecture.
+
+### Ajouté
+
+- gate CI testée qui bloque les motifs évidents de secrets et PII avant la publication ;
+- décision actuelle de conserver temporairement le dépôt et GitHub Pages publics ;
+- preuves live : Finance OS joignable, Hermes sur Honcho avec gateway supervisé, OpenCode stale et recherche ourmem toujours bloquée.
+
+### Non effectué
+
+- aucune mutation des vaults, TaskNotes, mémoires, bases, services ou dépôts voisins ;
+- aucune architecture cible, besoin ou opérationnalité accepté par narration.
+
 ## 2026-08-28 — Intégration des audits AUD-002 à AUD-006
 
 ### Ajouté

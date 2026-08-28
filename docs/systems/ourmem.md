@@ -4,7 +4,7 @@ system_id: SYS-005
 status: current_or_historical_as_reported
 audit_state: reported
 date: 2026-08-28
-source_ids: []
+source_ids: [SRC-OURMEM, SRC-LIVE]
 ---
 
 # ourmem
@@ -13,7 +13,7 @@ source_ids: []
 
 ## Verdict
 
-Mémoire persistante self-hosted documentée et partiellement lisible via MCP ; la recherche sémantique a échoué et le déploiement/runtime maintenu n’est pas prouvé.
+Mémoire persistante self-hosted joignable via MCP : statistiques, liste et profil sont lisibles. La recherche sémantique échoue toujours avec un quota d’embeddings 403 ; la résilience, les backups et le déploiement maintenu restent non prouvés.
 
 ## Autorité des faits
 
@@ -76,8 +76,8 @@ Mémoire persistante self-hosted documentée et partiellement lisible via MCP ; 
 
 - **verified :**
 - configuration documentée
-- lectures MCP réelles bornées
-- recherche réelle échouée
+- lectures MCP réelles : 698 mémoires actives observées, statistiques/liste/profil disponibles
+- recherche réelle toujours bloquée par le quota d’embeddings
 - **not_proven :**
 - intégration OpenCode
 - service maintenu operational
@@ -85,7 +85,7 @@ Mémoire persistante self-hosted documentée et partiellement lisible via MCP ; 
 
 ## Contradictions
 
-- lectures MCP réussies versus recherche bloquée
+- statistiques/liste/profil MCP réussis versus recherche sémantique bloquée
 - note Void planifiée versus compose Nova courant
 - politique secrets externes versus valeurs concrètes dans le compose
 
@@ -94,7 +94,7 @@ Mémoire persistante self-hosted documentée et partiellement lisible via MCP ; 
 - conteneur/version/digest réellement déployés
 - writer runtime
 - backup/restore
-- résolution du quota embeddings
+- résolution du quota embeddings 403
 
 ## Provenance
 

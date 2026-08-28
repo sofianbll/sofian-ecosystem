@@ -4,7 +4,7 @@ system_id: SYS-004
 status: current_or_historical_as_reported
 audit_state: reported
 date: 2026-08-28
-source_ids: []
+source_ids: [SRC-OPENCODE]
 ---
 
 # OpenCode
@@ -13,7 +13,7 @@ source_ids: []
 
 ## Verdict
 
-Source canonique d’un historique OpenCode multi-agents et multi-projets ; le service OpenCode/OpenChamber actuel, son writer runtime et son contrat courant restent inconnus.
+Source canonique d’un historique OpenCode multi-agents et multi-projets. La base contient toujours 1 609 sessions ; l’index dérivé reste stale à 1 601. Le service OpenCode/OpenChamber actuel, son writer runtime et son contrat courant restent inconnus.
 
 ## Autorité des faits
 
@@ -76,6 +76,7 @@ Source canonique d’un historique OpenCode multi-agents et multi-projets ; le s
 - **verified :**
 - base et schéma réellement interrogés
 - historique architectural documenté
+- 1 609 sessions, 40 619 messages et 186 048 parts confirmés le 2026-08-28
 - **not_proven :**
 - service actuel intégré
 - user_accepted
