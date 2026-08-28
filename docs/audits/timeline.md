@@ -6,7 +6,7 @@ date: 2026-08-27
 
 # Timeline
 
-> **Attention :** cette page intègre les ancres contre-vérifiées du pilote `AUD-001` et quelques ancres de cadrage hors corpus. Elle n’est pas encore l’histoire complète.
+> **Attention :** cette page intègre les ancres contre-vérifiées d’`AUD-001` à `AUD-006`. Elle conserve les périodes sans preuve et ne transforme pas les statuts documentaires en usage opérationnel.
 
 | Date | Événement prouvé | État | Source |
 |---|---|---|---|
@@ -21,16 +21,18 @@ date: 2026-08-27
 | 2026-05-15 | correction documentaire : date et quatre rubriques V4 passent au 15 mai ; ajout de la documentation V4 par layers | `historical_execution` | `SRC-OBS-OLD`, `CLM-AUD-001-218,314,318,319,323` |
 | 2026-05-16 | fin de la période `AUD-001` sans événement direct distinct dans son corpus fermé | `unknown` | `AUD-001` |
 | 2026-05-16 | commit racine vérifié du vault actif `Sofian-OS`, hors corpus `AUD-001` | `historical_execution` | `SRC-OBS-ACTIVE`, commit `306ff1a…` |
+| 2026-05-16 | décision documentée de créer un vault propre `Sofian-OS` et de conserver `Sofian's Vault` en lecture seule | `historical_execution` | `AUD-002`, `CLM-AUD-002-314,401,408` |
+| 2026-05-18 | ajout sélectif de 13 notes V4 transformées dans `Sofian-OS`, puis ajout séparé du mapping Obsidian | `historical_execution` | `AUD-002`, `CLM-AUD-002-406,407` |
 | 2026-06-10 | plus ancienne session présente dans la base OpenCode auditée | `historical_execution` | `SRC-OPENCODE` |
 | 2026-06-27 | travail OpenCode explicite sur Jarvis Agent et ses skills | `historical_intent` | `SRC-OPENCODE` |
 | 2026-08-19 | début du chantier Hermes retrouvé sur Sofian Ecosystem | `historical_execution` | `SRC-HERMES` |
 | 2026-08-25 | premier commit du dépôt `sofian-ecosystem` | `historical_execution` | `SRC-BASELINE`, commit `e331ee4…` |
 | 2026-08-27 | baseline archivée et nouveau système d’audit autorisé | `user_decision` | conversation Hermes courante, commit `e090180…` |
+| 2026-08-28 | intégration documentaire des audits `AUD-002` à `AUD-006` après cinq synthèses contre-auditées | `historical_execution` | rapports intégrés ; aucune mutation des sources externes |
 
-## À produire
+## Limites encore ouvertes
 
-- séparer les ères Notion, vault historique, V1–V4, Jarvis/OpenCode, Sofian Ecosystem/Hermes ;
-- grouper les commits automatiques en changements sémantiques ;
-- relier chaque renommage à un événement ;
-- montrer décisions, corrections et niveaux de livraison ;
-- conserver les périodes sans preuve.
+- l’index OpenCode reste stale et 24 IDs hors cap ne sont pas individualisés ;
+- trois recherches ourmem n’ont retourné aucun résultat ;
+- les dates documentaires, Git et de validation restent séparées ;
+- aucune continuité globale Notion → vaults → runtimes n’est inférée sans locator direct.

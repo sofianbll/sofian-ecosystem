@@ -6,6 +6,26 @@ date: 2026-08-27
 
 # Changelog
 
+## 2026-08-28 — Intégration des audits AUD-002 à AUD-006
+
+### Ajouté
+
+- cinq rapports humains et cinq ledgers séparés : `AUD-002` à `AUD-006` ;
+- sept dossiers système au statut `reported` ;
+- couverture vérifiée des deux vaults, de 30 sessions OpenCode retenues, de six sessions Hermes, de sept systèmes et de 73 payloads de baseline.
+
+### Vérifié
+
+- claims acceptés : `94`, `83`, `56`, `132` et `94` selon les cinq workstreams ;
+- réparations et normalisations explicites, notamment SYS-003 Hermes : 20 claims retenus sur 24 réémis ;
+- manifeste baseline `73/73`, sources externes inchangées et absence de secret/PII détectée dans les artefacts intégrés.
+
+### Limites
+
+- index OpenCode dérivé stale et 24 IDs hors cap non individualisés ;
+- trois recherches ourmem bloquées avant résultat ;
+- aucun payload historique recopié, aucun workflow promu automatiquement et aucune cible, acceptation utilisateur ou opérationnalité déduite.
+
 ## 2026-08-28 — Intégration du pilote AUD-001
 
 ### Ajouté

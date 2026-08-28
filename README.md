@@ -1,6 +1,6 @@
 ---
 title: Sofian Ecosystem
-status: pilot_integrated_pending_review
+status: audit_corpus_integrated_pending_review
 date: 2026-08-27
 visibility: private-first
 ---
@@ -11,7 +11,7 @@ visibility: private-first
 
 Ce dépôt est la base commune permettant à plusieurs sessions et groupes d’agents de **reconstruire le passé, auditer l’état actuel, découvrir les besoins puis définir avec Sofian l’écosystème cible**.
 
-La **tranche pilote `AUD-001` est intégrée et contre-vérifiée**. Elle documente la genèse Notion/DOCX/V1–V4 ; le reste de l’écosystème, les dossiers système et l’architecture actuelle ne sont pas encore audités.
+Les **six audits `AUD-001` à `AUD-006` sont intégrés et contre-vérifiés**. Ils reconstruisent la genèse, les vaults, les historiques agents, les systèmes live et la fondation initiale, tout en conservant les blocages et claims rejetés.
 
 ## Trois portes d’entrée
 
@@ -23,12 +23,12 @@ La **tranche pilote `AUD-001` est intégrée et contre-vérifiée**. Elle docume
 
 - baseline initiale archivée et vérifiée sous [`archive/baselines/2026-08-25-foundation-e331ee4/`](archive/baselines/2026-08-25-foundation-e331ee4/BASELINE.md) ;
 - méthode, scope, sources, preuves et protocoles installés ;
-- six workstreams bornés, dont le pilote `AUD-001` intégré ;
-- audits intégrés : **[`AUD-001`](docs/audits/workstreams/AUD-001-notion-docx-genesis/report.md)** ;
-- dossiers système acceptés : **aucun** ;
+- six workstreams bornés et intégrés ;
+- audits intégrés : **[`AUD-001`](docs/audits/workstreams/AUD-001-notion-docx-genesis/report.md) à [`AUD-006`](docs/audits/catalog.md)** ;
+- dossiers système reportés : **7** ; dossiers système acceptés : **aucun** ;
 - besoins validés : **aucun** ;
 - cible acceptée : **aucune** ;
-- prochaine gate : **revue de la méthode pilote par Sofian avant extension à `AUD-002`** ;
+- prochaine gate : **tester les frontières et corrections par des scénarios réels avant validation des besoins et de l’architecture actuelle** ;
 - publication : **GitHub Pages public actif ; la politique cible reste privée d’abord et doit être réconciliée**.
 
 ## Autorités

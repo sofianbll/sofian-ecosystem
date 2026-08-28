@@ -11,19 +11,19 @@ Cette page décrit les **résultats successifs** du chantier. Elle ne remplace p
 
 ## Phase 0 — Fondation documentaire
 
-**État : fondation méthodologique éprouvée par une tranche pilote intégrée.**
+**État : fondation méthodologique éprouvée par six audits intégrés.**
 
-La structure, les preuves, les protocoles, templates et briefs sont vérifiés. `AUD-001` est intégré ; la couverture du reste de l’écosystème et les dossiers système restent `not_started`.
+La structure, les preuves, les protocoles, templates et briefs sont vérifiés. `AUD-001` à `AUD-006` sont intégrés avec leurs limites ; sept dossiers système sont reportés, pas acceptés comme cible.
 
 ## Phase 1 — Tranche historique pilote
 
 Résultat : reconstruire la période Notion → DOCX V2 → ancien vault → V1/V2/V3/V4.
 
-**État : `AUD-001` intégré et techniquement contre-vérifié.** Le pilote couvre 10 objets sur 10 et 72 claims acceptés. Il ne prouve ni migration opérationnelle, ni filiation continue, ni architecture cible.
+**État : `AUD-001` intégré et techniquement contre-vérifié.** Le pilote couvre 10 objets sur 10 et 72 claims acceptés. La méthode a ensuite été exercée sur cinq audits supplémentaires.
 
 Apprentissages attendus : modèle de preuve validé, granularité correcte de timeline, traitement des données sensibles, première filiation de noms et conventions Mermaid éprouvées.
 
-La méthode n’est généralisée à la Phase 2 qu’après revue de Sofian.
+La généralisation a été explicitement autorisée par Sofian pour `AUD-002` à `AUD-006`.
 
 ## Phase 2 — Audit historique complet
 
@@ -31,11 +31,15 @@ Résultat : étendre la chronologie aux deux vaults, OpenCode/OpenChamber, Herme
 
 Fin lorsque chaque source déclarée possède une couverture vérifiable ou un blocage explicite.
 
+**État : intégré avec limites explicites.** Vaults, OpenCode, Hermes et baseline possèdent une couverture vérifiable ; l’index OpenCode stale et les recherches ourmem bloquées restent visibles.
+
 ## Phase 3 — État actuel et architecture croisée
 
 Résultat : dossiers système, autorités, flux, contrats, niveaux de livraison et contradictions actuelles.
 
 Fin lorsque plusieurs scénarios réels traversent les cartes sans propriétaire implicite ni double autorité.
+
+**État : fondation reportée, phase non terminée.** Sept dossiers sont intégrés au niveau `reported`. Les scénarios réels, corrections et restaurations restent à exercer avant toute acceptation d’architecture actuelle.
 
 ## Phase 4 — Besoins et capacités
 

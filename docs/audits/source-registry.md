@@ -1,6 +1,6 @@
 ---
 title: Registre des sources
-status: seeded
+status: active
 date: 2026-08-27
 ---
 
@@ -13,14 +13,14 @@ Ce registre décrit où lire. Il ne copie pas les sources et ne décide pas seul
 | `SRC-NOTION-LIVE` | API Notion, page `Sofian OS` | source historique directe | page créée le 2026-01-08 | accessible en lecture ; corpus complet non audité |
 | `SRC-NOTION-EXPORT` | `/Users/sofian/Developer/90-Archives/_DELETE-REVIEW/2026-06-14/notion-to-obsidian/Vault/` | conversion dérivée | fichiers datés 2026-02-10 ; contenu interne plus ancien | 8 442 fichiers, 765 177 009 octets ; `source_data` vide |
 | `SRC-DOCX-V2` | `/Users/sofian/Documents/00-Inbox/SOFIAN OS V2 Document Reference.docx` | document historique | document daté 2026-01-08 | lisible ; données sensibles à minimiser |
-| `SRC-OBS-OLD` | `/Users/sofian/Documents/Obsidian/Sofian's Vault/` | ancien vault, historique | Git 2026-05-04 → 2026-07-17 | lecture seule explicite |
-| `SRC-OBS-ACTIVE` | `/Users/sofian/Documents/Obsidian/Sofian-OS/` | vault canonique actuel | Git depuis 2026-05-16 | actif ; commits automatiques fréquents |
-| `SRC-OPENCODE` | `/Users/sofian/.local/share/opencode/opencode.db` | historique OpenCode canonique | 2026-06-10 → 2026-08-26 vérifié | base read-only ; index dérivé stale 1601/1609 sessions |
-| `SRC-HERMES` | sessions Hermes via `session_search` et base locale read-only | décisions et actions de sessions | chantier depuis 2026-08-19 ; session actuelle depuis 2026-08-27 | FTS peut ne pas indexer la session active immédiatement |
-| `SRC-OURMEM` | MCP `ourmem` | mémoire sémantique secondaire | données récentes visibles | listing accessible ; recherche bloquée par quota embeddings au 2026-08-27 |
-| `SRC-LIVE` | dépôts, configurations, APIs et runtimes spécialisés | état actuel vérifiable | selon chaque système | audit séparé requis |
+| `SRC-OBS-OLD` | `/Users/sofian/Documents/Obsidian/Sofian's Vault/` | ancien vault, historique | Git 2026-05-04 → 2026-07-17 | `AUD-002` intégré ; 21 documents et historique Git ciblé lus en lecture seule |
+| `SRC-OBS-ACTIVE` | `/Users/sofian/Documents/Obsidian/Sofian-OS/` | vault canonique actuel | Git depuis 2026-05-16 | `AUD-002`/`AUD-005` intégrés ; 12 documents et historique Git ciblé lus ; usage maintenu non prouvé globalement |
+| `SRC-OPENCODE` | `/Users/sofian/.local/share/opencode/opencode.db` | historique OpenCode canonique | 2026-06-10 → 2026-08-26 vérifié | `AUD-003` intégré ; base read-only ; index dérivé stale 1601/1609 ; 24 IDs hors cap non individualisés |
+| `SRC-HERMES` | sessions Hermes via `session_search` et base locale read-only | décisions et actions de sessions | chantier depuis 2026-08-19 | `AUD-004` intégré sur 6/6 sessions ; les sessions ne prouvent pas seules un état opérationnel actuel |
+| `SRC-OURMEM` | MCP `ourmem` | mémoire sémantique secondaire | statut vérifié le 2026-08-28 | 3/3 recherches tentées dans `AUD-004`, toutes bloquées avant résultat ; ni absence de souvenirs ni panne permanente prouvée |
+| `SRC-LIVE` | dépôts, configurations, APIs et runtimes spécialisés | état actuel vérifiable | snapshot `AUD-005` du 2026-08-28 | 7/7 dossiers reportés ; aucun healthcheck distant, restauration ni niveau opérationnel global prouvé |
 | `SRC-GUIDE` | `/Users/sofian/Documents/00-Inbox/Guide-ultime-ingenierie-logicielle.pdf` | méthode d’ingénierie | édition 2026 | méthode, pas décision personnelle |
-| `SRC-BASELINE` | `archive/baselines/2026-08-25-foundation-e331ee4/` | première consolidation du dépôt | commit `e331ee4…` | 73/73 blobs et 255 869 octets vérifiés |
+| `SRC-BASELINE` | `archive/baselines/2026-08-25-foundation-e331ee4/` | première consolidation du dépôt | commit `e331ee4…` | `AUD-006` intégré ; manifeste 73/73 vérifié ; 24 candidats à revue, aucun payload recopié automatiquement |
 | `SRC-STUDIOFLOW` | `/Users/sofian/Developer/10-Personal/studioflow/` | modèle VitePress / CI | déploiement vérifié le 2026-08-26 | public ; ne pas copier sa politique de publication |
 
 ## Locators de la session fondatrice active

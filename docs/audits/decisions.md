@@ -30,13 +30,14 @@ Ces entrées décrivent ce que les documents affirmaient à l’époque. Elles n
 | `HIS-002` | La synthèse V2 conserve une vision long terme et diffère une partie de l’infrastructure. | `historical_intent` | `SRC-OBS-OLD` ; implémentation non prouvée |
 | `HIS-003` | Le cadrage V3 repart du système abstrait avant le choix des outils. | `historical_intent` | `SRC-OBS-OLD` ; cadrage documenté seulement |
 | `HIS-004` | Le journal V4 décrit Obsidian comme Interface Adapter et Mermaid comme canon logique. | `historical_intent` | `SRC-OBS-OLD` ; `Actée`, `Validé` et `canon` restent des statuts internes au document |
+| `HIS-005` | La documentation du 2026-05-16 établit un vault propre `Sofian-OS` et conserve l’ancien vault en lecture seule. | `historical_execution` | `AUD-002`, claims `314`, `401`, `408` ; acceptation utilisateur actuelle non déduite |
+| `HIS-006` | Treize notes V4 ont été ajoutées sélectivement au nouveau vault, puis le mapping a été ajouté séparément. | `historical_execution` | `AUD-002`, claims `406`, `407` ; aucune migration globale prouvée |
+| `HIS-007` | Hermes est documenté comme runtime du chantier à cette période. | `historical_execution` | `AUD-003`/`AUD-004` ; partage futur avec OpenCode non décidé |
+| `HIS-008` | Les mutations agentiques doivent rester liées à un lot explicitement approuvé et relu. | `user_decision` | sessions Hermes relues par `AUD-004` et trace de décision `AUD-006` ; pas d’autorisation réutilisable hors lot |
 
-## Décisions historiques à reconstruire
+## Décisions encore ouvertes
 
-- périmètre et sens de chaque V1/V2/V3/V4 ;
-- passage de Notion à Obsidian ;
-- création du vault propre `Sofian-OS` ;
-- responsabilités successives de Jarvis, OpenCode et Hermes ;
+- responsabilité future et partage exact entre Jarvis, OpenCode et Hermes ;
 - cartes domaines, capacités et autorités ;
 - choix Brief, Mail, Daily Start ou Clarify ;
 - mémoire, Bots, automatisations et infrastructure différées ou rouvertes.

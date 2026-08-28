@@ -39,6 +39,19 @@ Un nom similaire ne prouve ni continuité ni remplacement.
 
 Les désignations V1–V4 prouvent des documents, cadrages et journaux historiques. Elles ne prouvent pas des releases logicielles livrées.
 
+## Relations intégrées depuis AUD-002 et AUD-003
+
+| Nom A | Nom B | Verdict | Limite |
+|---|---|---|---|
+| `Sofian's Vault` | `Sofian-OS` | `distinct` | racines Git indépendantes ; le second n’est ni un renommage global ni une copie byte-for-byte du premier |
+| 13 notes V4 de `Sofian's Vault` | 13 notes V4 de `Sofian-OS` | `selective_transformation` | ajout sélectif prouvé le 2026-05-18 ; 13/13 paires comparables diffèrent octet pour octet |
+| `Sofian OS V4` | `Sofian-OS` | `contains_adapter_relation` | V4 décrit le système/documentation ; `Sofian-OS` nomme le vault/adaptateur actuel, sans prouver tout le système opérationnel |
+| `Jarvis` | `Jarvis Agent` | `unresolved` | usages historiques à plusieurs niveaux ; aucune fusion globale autorisée |
+| `Jarvis Agent` | `Jarvis OS` | `unresolved` | projet/configuration et architecture historique restent distincts |
+| `OpenCode` | `OpenChamber` | `distinct_roles` | OpenCode est la source conversationnelle canonique ; OpenChamber est principalement une interface/métadonnée historique |
+
+`AUD-003` conserve aussi séparément `Sofian OS`, `Sofian-OS`, `Sofian's Vault`, `Sofian Ecosystem`, `Jarvis`, `Jarvis Agent`, `Jarvis OS`, OpenCode et OpenChamber. La proximité des noms ne prouve ni alias, ni succession, ni remplacement.
+
 ## Fiche de relation
 
 ```text

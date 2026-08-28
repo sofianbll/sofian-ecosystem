@@ -18,6 +18,18 @@ date: 2026-08-27
 | `CON-006` | journal V4 enregistré le 14 mai puis redaté au 15 mai | confusion entre temps d’enregistrement et temps factuel | conserver les deux états ; date factuelle des décisions `unresolved` |
 | `CON-007` | `Validé`, `Actée` et `canon` sont employés dans les documents historiques | risque d’inférer `user_accepted`, `integrated` ou `operational` | traiter ces mots comme statuts internes tant qu’une preuve distincte n’existe pas |
 
+## État après AUD-002 à AUD-006
+
+| ID | Verdict intégré | Limite conservée |
+|---|---|---|
+| `CON-001` | les priorités historiques successives sont confirmées comme états datés | le besoin actuel doit encore être choisi ; aucun ancien chantier n’est repris automatiquement |
+| `CON-002` | les documents historiques et snapshots restent des preuves de ce qui était écrit | persistance, commit ou statut `done` ne prouvent toujours pas l’acceptation de Sofian |
+| `CON-003` | `Jarvis`, `Jarvis Agent` et `Jarvis OS` restent des identités séparées | aucune frontière cible n’est décidée |
+| `CON-004` | les sept dossiers système conservent leurs oracles et niveaux séparés | aucun statut produit global n’est construit depuis des suites hétérogènes |
+| `CON-005` | OpenCode est prouvé comme source historique et outil spécialisé | son rôle futur reste `unresolved` |
+| `CON-008` | ancien et nouveau vault ont des racines Git indépendantes ; 13 notes ont été transformées sélectivement | ni migration globale, ni continuité byte-for-byte, ni usage maintenu ne sont prouvés |
+| `CON-009` | configuration ourmem et branche mémoire sont documentées | les 3 recherches `AUD-004` ont été bloquées avant résultat ; absence de souvenirs et panne permanente restent non prouvées |
+
 ## Tensions temporelles non contradictoires
 
 - Le DOCX daté du 2026-01-08 contient des objectifs et échéances étiquetés 2025. Les deux temps sont conservés sans inférer accomplissement, invalidité ou contradiction factuelle.

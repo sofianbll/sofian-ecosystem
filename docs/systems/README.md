@@ -1,6 +1,6 @@
 ---
 title: Dossiers système
-status: not_started
+status: reported
 date: 2026-08-27
 ---
 
@@ -8,23 +8,35 @@ date: 2026-08-27
 
 ## État
 
-Aucun dossier système actif n’est encore accepté dans le nouvel arbre. Les documents précédents restent dans la baseline et seront réintégrés uniquement après audit.
+Sept dossiers issus d’`AUD-005` sont intégrés au niveau **`reported`**. Ils ne sont ni des cibles acceptées, ni une preuve d’usage opérationnel. Les documents précédents restent dans la baseline ; `AUD-006` identifie des candidats à revue sans les recopier.
 
-## Sujets d’audit semés
+## Dossiers intégrés
+
+| Dossier | État documentaire | Claims acceptés |
+|---|---|---:|
+| [Sofian OS V4 + TaskNotes](sofian-os-v4-tasknotes.md) | `reported` | 30 |
+| [Jarvis](jarvis.md) | `reported` | 24 |
+| [Hermes](hermes.md) | `reported` | 20 |
+| [OpenCode](opencode.md) | `reported` | 12 |
+| [ourmem](ourmem.md) | `reported` | 12 |
+| [Homelab-OS](homelab-os.md) | `reported` | 13 |
+| [Finance OS](finance-os.md) | `reported` | 21 |
+
+## Sujets et identités à préserver
 
 | Nom littéral | Nature à tester | État documentaire | Source de découverte |
 |---|---|---|---|
-| `Sofian OS V4` | système humain portable / modèle métier | `seeded_subject` | `SRC-OBS-ACTIVE` — Architecture Référence et Journal V4 |
-| `Sofian-OS` | vault Obsidian actif / adapter | `tool_identity_observed` | `SRC-OBS-ACTIVE` — `AGENTS.md:3-8` |
-| `TaskNotes` | gestionnaire d’état des tâches | `authority_claim_sourced` | `SRC-OBS-ACTIVE` — `AGENTS.md:26-31`, Journal V4 `:104-110` |
-| `Jarvis` / `Jarvis Agent` / `Jarvis OS` | agent, projet et architecture selon l’époque | `identity_unresolved` | `SRC-LIVE` — `/Users/sofian/Developer/10-Personal/jarvis/AGENTS.md`, lignes `3–18`, plus sources historiques |
-| `Hermes` | runtime et interface de la session actuelle | `live_subject_to_audit` | `SRC-HERMES` — session `20260827_154335_c51ad8` |
-| `OpenCode` | runtime et historique agentique | `future_role_unresolved` | `SRC-OPENCODE` |
-| `ourmem` | mémoire sémantique secondaire candidate | `live_subject_to_audit` | `SRC-OURMEM` |
-| `Homelab-OS` | configuration et reconstruction du homelab | `authority_claim_sourced` | `SRC-LIVE` — `/Users/sofian/Homelab-OS/AGENTS.md`, lignes `3–23` |
-| `Finance OS` | système spécialisé financier candidat | `historical_subject_to_audit` | `SRC-BASELINE` ; état live à vérifier |
+| `Sofian OS V4` | système humain portable / modèle métier | `reported_subject` | `AUD-002`, `AUD-005` |
+| `Sofian-OS` | vault Obsidian actif / adapter | `confirmed_tool_identity` | `AUD-002` |
+| `TaskNotes` | gestionnaire d’état des tâches | `reported_authority` | `AUD-005` |
+| `Jarvis` / `Jarvis Agent` / `Jarvis OS` | agent, projet et architecture selon l’époque | `identity_unresolved` | `AUD-003`, `AUD-005` |
+| `Hermes` | runtime et interface du chantier | `reported_subject` | `AUD-004`, `AUD-005` |
+| `OpenCode` | runtime et historique agentique | `future_role_unresolved` | `AUD-003`, `AUD-005` |
+| `ourmem` | mémoire sémantique secondaire | `reported_with_blocker` | `AUD-004`, `AUD-005` |
+| `Homelab-OS` | configuration et reconstruction du homelab | `reported_authority` | `AUD-005` |
+| `Finance OS` | système spécialisé financier | `reported_subject` | `AUD-005` |
 
-Cette table est une file de sujets avec provenance, pas une carte de frontières ni d’autorités acceptées.
+Cette table préserve les identités et la provenance. Les dossiers restent des rapports, pas une carte cible acceptée.
 
 ## Contrat d’un dossier
 
