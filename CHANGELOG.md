@@ -6,6 +6,26 @@ date: 2026-08-27
 
 # Changelog
 
+## 2026-08-28 — Intégration du pilote AUD-001
+
+### Ajouté
+
+- rapport humain `AUD-001` et ledger séparé de 72 claims acceptés ;
+- couverture vérifiée de 10 objets sur 10, sans exclusion ni blocage ;
+- chronologie, filiation des noms, décisions historiques et contradictions issues du corpus fermé.
+
+### Vérifié
+
+- reviews `R1` et `R2`, réparation de 17 claims, contre-audit `R3` sans finding et contre-vérification Jarvis ;
+- séparation entre artefacts `documented`, solutions `proposed` et niveaux non prouvés ;
+- aucune mutation de Notion, des vaults Obsidian, de TaskNotes, d’ourmem ou d’un autre système externe.
+
+### Limites
+
+- aucune migration opérationnelle ni filiation continue de bout en bout n’est prouvée ;
+- aucune architecture cible, aucun besoin actuel et aucun dossier système ne sont acceptés par cette intégration ;
+- la méthode pilote doit encore être revue par Sofian avant généralisation.
+
 ## 2026-08-27 — Système d’audit et de conception
 
 ### Ajouté

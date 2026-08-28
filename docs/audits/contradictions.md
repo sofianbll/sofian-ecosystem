@@ -1,6 +1,6 @@
 ---
 title: Contradictions
-status: seeded
+status: active
 date: 2026-08-27
 ---
 
@@ -15,6 +15,13 @@ date: 2026-08-27
 | `CON-003` | noms `Jarvis`, `Jarvis Agent` et `Jarvis OS` employés à plusieurs niveaux | frontières fausses | audit d’identité et de responsabilités |
 | `CON-004` | annonces agrégées de tests ou de livraison provenant de suites différentes | niveau de livraison gonflé | conserver chaque suite et chaque oracle séparément |
 | `CON-005` | responsabilité future d’OpenCode | risque de le déclarer obsolète | garder `unresolved` jusqu’à décision de Sofian |
+| `CON-006` | journal V4 enregistré le 14 mai puis redaté au 15 mai | confusion entre temps d’enregistrement et temps factuel | conserver les deux états ; date factuelle des décisions `unresolved` |
+| `CON-007` | `Validé`, `Actée` et `canon` sont employés dans les documents historiques | risque d’inférer `user_accepted`, `integrated` ou `operational` | traiter ces mots comme statuts internes tant qu’une preuve distincte n’existe pas |
+
+## Tensions temporelles non contradictoires
+
+- Le DOCX daté du 2026-01-08 contient des objectifs et échéances étiquetés 2025. Les deux temps sont conservés sans inférer accomplissement, invalidité ou contradiction factuelle.
+- Le Plan décrit Obsidian comme hub central, puis V3 et V4 le décrivent comme outil actuel et Interface Adapter. Cela peut représenter une évolution documentaire ; aucun remplacement causal n’est prouvé.
 
 ## Corrections déjà vérifiées
 

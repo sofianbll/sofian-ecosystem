@@ -1,6 +1,6 @@
 ---
 title: Sofian Ecosystem
-status: foundation_ready_for_pilot
+status: pilot_integrated_pending_review
 date: 2026-08-27
 visibility: private-first
 ---
@@ -11,7 +11,7 @@ visibility: private-first
 
 Ce dépôt est la base commune permettant à plusieurs sessions et groupes d’agents de **reconstruire le passé, auditer l’état actuel, découvrir les besoins puis définir avec Sofian l’écosystème cible**.
 
-La **fondation méthodologique et les handoffs sont prêts pour la tranche pilote `AUD-001`**. Le contenu de l’écosystème, les dossiers système et l’architecture actuelle ne sont pas encore audités.
+La **tranche pilote `AUD-001` est intégrée et contre-vérifiée**. Elle documente la genèse Notion/DOCX/V1–V4 ; le reste de l’écosystème, les dossiers système et l’architecture actuelle ne sont pas encore audités.
 
 ## Trois portes d’entrée
 
@@ -23,12 +23,13 @@ La **fondation méthodologique et les handoffs sont prêts pour la tranche pilot
 
 - baseline initiale archivée et vérifiée sous [`archive/baselines/2026-08-25-foundation-e331ee4/`](archive/baselines/2026-08-25-foundation-e331ee4/BASELINE.md) ;
 - méthode, scope, sources, preuves et protocoles installés ;
-- six briefs bornés et prêts pour délégation ;
-- audits complets intégrés : **aucun** ;
+- six workstreams bornés, dont le pilote `AUD-001` intégré ;
+- audits intégrés : **[`AUD-001`](docs/audits/workstreams/AUD-001-notion-docx-genesis/report.md)** ;
 - dossiers système acceptés : **aucun** ;
 - besoins validés : **aucun** ;
 - cible acceptée : **aucune** ;
-- publication : **privée d’abord, hébergement différé**.
+- prochaine gate : **revue de la méthode pilote par Sofian avant extension à `AUD-002`** ;
+- publication : **GitHub Pages public actif ; la politique cible reste privée d’abord et doit être réconciliée**.
 
 ## Autorités
 

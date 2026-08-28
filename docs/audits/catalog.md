@@ -10,7 +10,7 @@ Les états ci-dessous décrivent la **couverture documentaire**, pas le statut d
 
 | ID | Workstream | Brief | Couverture | Rapport intégré |
 |---|---|---|---|---|
-| `AUD-001` | Genèse Notion et DOCX | [ouvrir](workstreams/AUD-001-notion-docx-genesis/brief.md) | `brief_ready` | non |
+| `AUD-001` | Genèse Notion et DOCX | [ouvrir](workstreams/AUD-001-notion-docx-genesis/brief.md) | `integrated` | [rapport](workstreams/AUD-001-notion-docx-genesis/report.md) |
 | `AUD-002` | Filiation des vaults Obsidian | [ouvrir](workstreams/AUD-002-obsidian-lineage/brief.md) | `brief_ready` | non |
 | `AUD-003` | OpenCode / OpenChamber | [ouvrir](workstreams/AUD-003-opencode-openchamber/brief.md) | `brief_ready` | non |
 | `AUD-004` | Hermes et ourmem | [ouvrir](workstreams/AUD-004-hermes-ourmem/brief.md) | `brief_ready` | non |

@@ -1,17 +1,17 @@
 ---
 title: Couverture de l’audit
-status: seeded
+status: active
 date: 2026-08-27
 ---
 
 # Couverture
 
-## État initial
+## État actuel
 
 | Dimension | État | Commentaire |
 |---|---|---|
 | Sources principales | `inventoried` | registre initial créé, contenu non exhaustivement audité |
-| Notion / DOCX | `brief_ready` | tranche pilote |
+| Notion / DOCX | `integrated` | `AUD-001` : corpus fermé de 10 objets contre-vérifié |
 | Ancien et nouveau vault | `brief_ready` | filiation à reconstruire |
 | OpenCode / OpenChamber | `brief_ready` | index stale à traiter sans modifier la base canonique |
 | Hermes / ourmem | `brief_ready` | recherche ourmem partiellement bloquée |
@@ -20,6 +20,14 @@ date: 2026-08-27
 | Noms et identités | `seeded` | relations non prouvées restent ouvertes |
 | Besoins | `not_started` | aucun besoin canonisé |
 | Cible | `none_accepted` | aucune architecture cible validée |
+
+## Lots intégrés
+
+| Audit | Attendus | Inspectés | Exclus | Bloqués | Claims acceptés | Claims rejetés |
+|---|---:|---:|---:|---:|---:|---:|
+| [`AUD-001`](workstreams/AUD-001-notion-docx-genesis/report.md) | 10 | 10 | 0 | 0 | 72 | 0 |
+
+Cette couverture vaut uniquement pour le corpus fermé `AUD-001`. `AUD-002`, la filiation complète des vaults et le reste de l’écosystème restent à auditer ; aucun pourcentage global n’est déduit de ce pilote.
 
 ## Une couverture est complète lorsque
 

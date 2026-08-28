@@ -1,6 +1,6 @@
 ---
 title: Registre de décisions reconstruites
-status: seeded
+status: active
 date: 2026-08-27
 source_session: 20260827_154335_c51ad8
 ---
@@ -19,6 +19,17 @@ Cette page reconstruit les décisions historiques et actuelles. Les ADR actifs d
 | `CUR-004` | Archiver la fondation initiale puis créer un nouveau socle actif | `user_decision` | `SRC-HERMES` — message `52972`, réponse `clarify` `53020` |
 | `CUR-005` | Utiliser deux commits locaux, sans remote ni push | `user_decision` | `SRC-HERMES` — réponse `clarify` `53020` |
 | `CUR-006` | TaskNotes reste l’autorité des tâches opérationnelles | `current_canon` | `SRC-OBS-ACTIVE` — `AGENTS.md:26-31`, Journal V4 `:104-110` |
+
+## Décisions historiques intégrées depuis AUD-001
+
+Ces entrées décrivent ce que les documents affirmaient à l’époque. Elles ne deviennent pas des décisions canoniques actuelles.
+
+| ID | Décision historique bornée | État | Source / limite |
+|---|---|---|---|
+| `HIS-001` | Le Plan propose une migration Notion → Obsidian par phases. | `historical_intent` | `SRC-OBS-OLD` ; réalisation non prouvée |
+| `HIS-002` | La synthèse V2 conserve une vision long terme et diffère une partie de l’infrastructure. | `historical_intent` | `SRC-OBS-OLD` ; implémentation non prouvée |
+| `HIS-003` | Le cadrage V3 repart du système abstrait avant le choix des outils. | `historical_intent` | `SRC-OBS-OLD` ; cadrage documenté seulement |
+| `HIS-004` | Le journal V4 décrit Obsidian comme Interface Adapter et Mermaid comme canon logique. | `historical_intent` | `SRC-OBS-OLD` ; `Actée`, `Validé` et `canon` restent des statuts internes au document |
 
 ## Décisions historiques à reconstruire
 

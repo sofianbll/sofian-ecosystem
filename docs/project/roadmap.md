@@ -11,17 +11,19 @@ Cette page décrit les **résultats successifs** du chantier. Elle ne remplace p
 
 ## Phase 0 — Fondation documentaire
 
-**État : fondation méthodologique prête pour la tranche pilote.**
+**État : fondation méthodologique éprouvée par une tranche pilote intégrée.**
 
-La structure, les preuves, les protocoles, templates et briefs sont vérifiés. La couverture de l’écosystème reste `not_started` : aucun audit complet ni dossier système n’est accepté.
+La structure, les preuves, les protocoles, templates et briefs sont vérifiés. `AUD-001` est intégré ; la couverture du reste de l’écosystème et les dossiers système restent `not_started`.
 
 ## Phase 1 — Tranche historique pilote
 
 Résultat : reconstruire la période Notion → DOCX V2 → ancien vault → V1/V2/V3/V4.
 
+**État : `AUD-001` intégré et techniquement contre-vérifié.** Le pilote couvre 10 objets sur 10 et 72 claims acceptés. Il ne prouve ni migration opérationnelle, ni filiation continue, ni architecture cible.
+
 Apprentissages attendus : modèle de preuve validé, granularité correcte de timeline, traitement des données sensibles, première filiation de noms et conventions Mermaid éprouvées.
 
-La méthode n’est généralisée qu’après revue de Sofian.
+La méthode n’est généralisée à la Phase 2 qu’après revue de Sofian.
 
 ## Phase 2 — Audit historique complet
 
